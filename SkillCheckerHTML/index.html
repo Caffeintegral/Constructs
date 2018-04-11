@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>SkillChecker</title>
+<link rel = "stylesheet" type"text/css" href="style.css">
+<script src="skillcheck.js"></script>
+<script src="data.js"></script>
+
+</head>
+<body>
+<form action="#" name="form1">
+<div class = "mainField">
+	<table class = "skillSelect" able border="0">
+		<tr class = "top">
+			<th colspan="2">継戦</th>
+			<th colspan="2">攻撃</th>
+			<th colspan="2">支援</th>
+			<th colspan="2">汎用</th>
+		</tr>
+
+		<div class = "content">
+			<tr>
+				<td>
+					<input type="checkbox" value="on" onclick="a1(this.checked);" id="p1_1"><label for="p1_1">危険察知</label>
+				</td>
+				<td>
+					<input type="checkbox" value="on" onclick="a2(this.checked);" id="p1_2"><label for="p1_2">予防整備</label>
+				</td>
+				<td>
+					<input type="checkbox" value="on" onclick="a3(this.checked);" id="p1_3"><label for="p1_3">熟練装填手</label>
+				</td>
+				<td>
+					<input type="checkbox" value="on" onclick="a4(this.checked);" id="p1_4"><label for="p1_4">航空機整備専門家</label>
+				</td>
+				<td>
+					<input type="checkbox" value="on" onclick="a5(this.checked);" id="p1_5"><label for="p1_5">水上機指揮所</label>
+				</td>
+				<td>
+					<input type="checkbox" value="on" onclick="a6(this.checked);" id="p1_6"><label for="p1_6">ドッグファイト・エース</label>
+				</td>
+				<td>
+					<input type="checkbox" value="on" onclick="a7(this.checked);" id="p1_7"><label for="p1_7">敵弾接近警報</label>
+				</td>
+				<td>
+					<input type="checkbox" value="on" onclick="a8(this.checked);" id="p1_8"><label for="p1_8">回避軌道</label>
+				</td>
+			</tr>
+		</div>
+		<div class = "content">
+			<tr>
+				<td>
+					<input type="checkbox" value="on" onclick="b1(this.checked);" id="p2_1"><label for="p2_1">厳戒態勢</label>
+				</td>
+				<td>
+					<input type="checkbox" value="on" onclick="b2(this.checked);" id="p2_2"><label for="p2_2">なんでも屋</label>
+				</td>
+				<td>
+					<input type="checkbox" value="on" onclick="b3(this.checked);" id="p2_3"><label for="p2_3">熟練砲手</label>
+				</td>
+				<td>
+					<input type="checkbox" value="on" onclick="b4(this.checked);" id="p2_4"><label for="p2_4">雷速向上</label>
+				</td>
+				<td>
+					<input type="checkbox" value="on" onclick="b5(this.checked);" id="p2_5"><label for="p2_5">煙幕専門家</label>
+				</td>
+				<td>
+					<input type="checkbox" value="on" onclick="b6(this.checked);" id="p2_6"><label for="p2_6">エース後部銃手</label>
+				</td>
+				<td>
+					<input type="checkbox" value="on" onclick="b7(this.checked);" id="p2_7"><label for="p2_7">アドレナリンラッシュ</label>
+				</td>
+				<td>
+					<input type="checkbox" value="on" onclick="b8(this.checked);" id="p2_8"><label for="p2_8">最後の抵抗</label>
+				</td>
+			</tr>
+		</div>
+		<div class = "content">
+			<tr>
+				<td>
+					<input type="checkbox" value="on" onclick="c1(this.checked);" id="p3_1"><label for="p3_1">応急対応の基本</label>
+				</td>
+				<td>
+					<input type="checkbox" value="on" onclick="c2(this.checked);" id="p3_2"><label for="p3_2">抗堪専門家</label>
+				</td>
+				<td>
+					<input type="checkbox" value="on" onclick="c3(this.checked);" id="p3_3"><label for="p3_3">魚雷専門家</label>
+				</td>
+				<td>
+					<input type="checkbox" value="on" onclick="c4(this.checked);" id="p3_4"><label for="p3_4">緊急発艦</label>
+				</td>
+				<td>
+					<input type="checkbox" value="on" onclick="c5(this.checked);" id="p3_5"><label for="p3_5">基本射撃訓練</label>
+				</td>
+				<td>
+					<input type="checkbox" value="on" onclick="c6(this.checked);" id="p3_6"><label for="p3_6">管理</label>
+				</td>
+				<td>
+					<input type="checkbox" value="on" onclick="c7(this.checked);" id="p3_7"><label for="p3_7">爆発物専門家</label>
+				</td>
+				<td>
+					<input type="checkbox" value="on" onclick="c8(this.checked);" id="p3_8"><label for="p3_8">警戒</label>
+				</td>
+			</tr>
+		</div>
+		<div class = "content">
+			<tr>
+				<td>
+					<input type="checkbox" value="on" onclick="d1(this.checked);" id="p4_1"><label for="p4_1">副砲の手動制御</label>
+				</td>
+				<td>
+					<input type="checkbox" value="on" onclick="d2(this.checked);" id="p4_2"><label for="p4_2">防火</label>
+				</td>
+				<td>
+					<input type="checkbox" value="on" onclick="d3(this.checked);" id="p4_3"><label for="p4_3">榴弾用慣性信管</label>
+				</td>
+				<td>
+					<input type="checkbox" value="on" onclick="d4(this.checked);" id="p4_4"><label for="p4_4">制空権</label>
+				</td>
+				<td>
+					<input type="checkbox" value="on" onclick="d5(this.checked);" id="p4_5"><label for="p4_5">上級射撃訓練</label>
+				</td>
+				<td>
+					<input type="checkbox" value="on" onclick="d6(this.checked);" id="p4_6"><label for="p4_6">対空兵装の手動制御</label>
+				</td>
+				<td>
+					<input type="checkbox" value="on" onclick="d7(this.checked);" id="p4_7"><label for="p4_7">無線方向探知</label>
+				</td>
+				<td>
+					<input type="checkbox" value="on" onclick="d8(this.checked);" id="p4_8"><label for="p4_8">隠蔽処理専門家</label>
+				</td>
+			</tr>
+		</table>
+
+	<div class = "result">
+		<table border="1" style="background-color: #ffffff;">
+			<tr>
+				<td align="right" colspan="3">艦名</td>
+				<td>
+					<input type="search" id="Name" name="Name" value autocomplete="on" list="combolist" onchange="shipsearch()" onblur="setship()" size="12"> </td>
+			</tr>
+			<tr>
+				<td align="right" colspan="3">艦種</td>
+				<td>
+					<input type="text" name="Type" size="8" value=""> </td>
+			</tr>
+			<tr>
+				<td align="right" colspan="3">Tier</td>
+				<td>
+					<input type="text" name="Tier" size="8" value="150"> </td>
+			</tr>
+			<tr>
+				<td align="right" colspan="3">HP</td>
+				<td>
+					<input type="text" name="HP" size="8" value=""> </td>
+			</tr>
+			<tr>
+				<td align="right" colspan="3">主砲口径</td>
+				<td>
+					<input type="text" name="Caliber" size="8" value="150"> mm</td>
+			</tr>
+			<tr>
+				<td align="right" colspan="3">主砲射程</td>
+				<td>
+					<input type="text" name="Range" size="8" value="12"> km</td>
+			</tr>
+			<tr>
+				<td align="right" colspan="3">主砲火災発生率</td>
+				<td>
+					<input type="text" name="Burn" size="8" value="12"> %</td>
+			</tr>
+			<tr>
+				<td align="right" colspan="3">副砲射程</td>
+				<td>
+					<input type="text" name="SRange" size="8" value="12"> km</td>
+			</tr>
+			<tr>
+				<td align="right" colspan="3">副砲火災発生率</td>
+				<td>
+					<input type="text" name="SBurn" size="8" value="12"> %</td>
+			</tr>
+			<tr>
+				<td align="right" colspan="3">魚雷射程</td>
+				<td>
+					<input type="text" name="TRange" size="8" value="0"> km</td>
+			</tr>
+			<tr>
+				<td align="right" colspan="3">魚雷速度</td>
+				<td>
+					<input type="text" name="TSpeed" size="8" value="0"> knot</td>
+			</tr>
+			<tr>
+				<td align="right" colspan="3">魚雷装填時間</td>
+				<td>
+					<input type="text" name="TLoad" size="8" value="0"> 秒</td>
+			</tr>
+			<tr>
+				<td align="right" colspan="3">最長対空砲距離</td>
+				<td>
+					<input type="text" name="AA" size="8" value="0"> km</td>
+			</tr>
+			<tr>
+				<td align="right" colspan="3">最長対空砲秒間平均ダメージ</td>
+				<td>
+					<input type="text" name="AADamage" size="8" value="0"> </td>
+			</tr>
+			<tr>
+				<td align="right" colspan="3">最大速度</td>
+				<td>
+					<input type="text" name="Speed" size="8" value="0"> knot</td>
+			</tr>
+			<tr>
+				<td align="right" colspan="3">転舵所要時間</td>
+				<td>
+					<input type="text" name="Turn" size="8" value="0"> 秒</td>
+			</tr>
+			<tr>
+				<td align="right" colspan="3">海面発見距離</td>
+				<td>
+					<input type="text" name="Hiding" size="8" value="0"> km</td>
+			</tr>
+			<tr>
+				<td align="right" colspan="3">航空発見距離</td>
+				<td>
+					<input type="text" name="AHiding" size="8" value="0"> km</td>
+			</tr>
+		</table>
+		<div class ="counter">
+			<td align="right" colspan="3">現在のスキルポイント合計</td>
+			<td>
+				<input  id="Count" name="Count" size="8" value="0"> point</td>
+			</tr>
+		</div>
+	</div>
+</div>
+<datalist id="combolist">
+	<option value="Hashidate"></option>
+	<option value="Chikuma"></option>
+	<option value="Tenryu"></option>
+</datalist>
+</form>
+</body>
+</html>

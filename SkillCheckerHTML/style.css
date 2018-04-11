@@ -1,0 +1,38 @@
+body {
+  font-family: "Yu Gothic";
+  font-family: 'Yu Gothic';
+  font-size:0.9rem;
+}
+div.mainField{
+  width:1040px;
+  margin:0 auto;
+}
+div.mainField table.skillSelect tr td{
+  width:120px;
+  height:80px;
+  text-align:center;
+  border:1px #999 solid;
+  border-radius:8px;
+}
+div.mainField table.skillSelect tr td input[type=checkbox]{
+  display:none;
+}
+div.mainField table.skillSelect tr td label{
+  height:100%;
+  width:100%;
+  display:block;
+  padding:12px 0px 0px 0px;
+
+}
+div.mainField table.skillSelect tr td input[type=checkbox]:checked + label{
+	background: #badcad;
+	color: #ffffff;
+  height:100%;
+  width:100%;
+  display:block;
+  border-radius:8px;
+
+}
+
+div.mainField table.skillSelect{
+}
