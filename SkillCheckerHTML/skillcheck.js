@@ -2,10 +2,42 @@ function paste(){
     var text = document.form1.elements[target];
 }
 
+function countrySet(){
+    var selectedCountry ="";
+    for(i = 1; i < 5; i++){
+        switch (document.form1.country.selectedIndex){
+            case 0: document.form1.type.options[i].text="" ; break;
+            case 1: document.form1.type.options[i].text= jptype[i]; break;
+            case 2: document.form1.type.options[i].text= ustype[i]; break;
+            case 3: document.form1.type.options[i].text= kmtype[i]; break;
+            case 4: document.form1.type.options[i].text= rutype[i]; break;
+            case 5: document.form1.type.options[i].text= uktype[i]; break;
+            case 6: document.form1.type.options[i].text= frtype[i]; break;
+            case 7: document.form1.type.options[i].text= patype[i]; break;
+            case 8: document.form1.type.options[i].text= potype[i]; break;
+            case 9: document.form1.type.options[i].text= ettype[i]; break;
+        }
+    }
+    document.form1.type.selectedIndex=0;
+}
+
+function typeSet(){
+    for(i = 1; i < 15; i++){
+        switch(document.form1.type.selectedIndex){
+            case 0: document.form1.Name.options[i].text=""; break;
+            case 1: document.form1.Name.options[i].text= jpdd[i]; break;
+            case 2: document.form1.Name.options[i].text = jpca[i]; break;
+            case 3: document.form1.Name.options[i].text= jpbb[i]; break;
+            case 4: document.form1.Name.options[i].text= jpcv[i]; break;
+        }
+    }
+}
+
+
 function setship(){
     for(i=0; i<shipdata.length; i++){
         if(shipdata[i][0]==document.form1.elements['Name'].value){
-            document.form1.Name.value = shipdata[i][0];
+            // document.form1.Name.value = shipdata[i][0];
             document.form1.Type.value = shipdata[i][1];
             document.form1.Tier.value = shipdata[i][2];
             document.form1.HP.value = shipdata[i][3];
