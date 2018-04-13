@@ -22,7 +22,7 @@ function countrySet(){
 }
 
 function typeSet(){
-    for(i = 1; i < 15; i++){
+    for(i = 1; i < 20; i++){
         switch(document.form1.type.selectedIndex){
             case 0: document.form1.Name.options[i].text=""; break;
             case 1: document.form1.Name.options[i].text= jpdd[i]; break;
@@ -34,11 +34,17 @@ function typeSet(){
 }
 
 
-function setship(){
+function setship(idname){
+    var a = document.getElementById(idname);
+    var idx = a.selectedIndex;
+    var val = a.options[idx].value;
+    var txt = a.options[idx].text;
+    // console.log('選択したのは「インデックス:' + idx + ' 値:' + val + ' ラベル:' + txt + '」です');
     for(i=0; i<shipdata.length; i++){
-        if(shipdata[i][0]==document.form1.elements['Name'].value){
+        // for(n = 0; n < 15; n++){
+        if(shipdata[i][0]==txt){
             // document.form1.Name.value = shipdata[i][0];
-            document.form1.Type.value = shipdata[i][1];
+            // document.form1.Type.value = shipdata[i][1];
             document.form1.Tier.value = shipdata[i][2];
             document.form1.HP.value = shipdata[i][3];
             document.form1.Caliber.value = shipdata[i][4];
@@ -57,37 +63,37 @@ function setship(){
             document.form1.AHiding.value = shipdata[i][17];
 
             break;
-
+        // }
         }
     }
 }
 
-function shipsearch(){
-    var elm = document.getElementById('Name').value;
-    var j = 0;
-    var e = document.getElementById('combolist');
-    var e2 = '';
-    if (elm.length >= 1) {
-        for (i = 0; i < shipdata.length; i++) {
-            var elm3 = shipdata[i][0].toLowerCase();
-            var index = elm3.indexOf(elm);
-            if (index != -1) {
-                e2 += '<option value = "' + shipdata[i][0] + '"></option>';
-                j++;
-            }
-            if (j >= 20) {
-                break;
-            }
-        }
-        document.getElementById('Name').value = elm;//挿入するけど2重になっていく
+// function shipsearch(){
+//     var elm = document.getElementById('Name').value;
+//     var j = 0;
+//     var e = document.getElementById('combolist');
+//     var e2 = '';
+//     if (elm.length >= 1) {
+//         for (i = 0; i < shipdata.length; i++) {
+//             var elm3 = shipdata[i][0].toLowerCase();
+//             var index = elm3.indexOf(elm);
+//             if (index != -1) {
+//                 e2 += '<option value = "' + shipdata[i][0] + '"></option>';
+//                 j++;
+//             }
+//             if (j >= 20) {
+//                 break;
+//             }
+//         }
+//         document.getElementById('Name').value = elm;//挿入するけど2重になっていく
 
-        while (e.firstChild) {
-            e.removeChild(e.firstChild);
-        }
-        e.innerHTML += e2;
-    }
+//         while (e.firstChild) {
+//             e.removeChild(e.firstChild);
+//         }
+//         e.innerHTML += e2;
+//     }
 
-}
+// }
 function a1(ischecked) {
     if (ischecked == true) {
         var count = parseInt(document.form1.Count.value) + 1;

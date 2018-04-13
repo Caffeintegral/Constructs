@@ -11,7 +11,7 @@ var shipdata = [
     ["Furutaka",  "巡洋艦",  5,  30700,  203,  13.9,  17,  4.0,  8,  10, 59, 94, 4.5, 20, 34.5,  5.7,  12.6,  7.0],
     ["Aoba", "巡洋艦", 6, 31700, 203, 14.9, 17, 4.5, 8, 10, 59, 102, 4.5, 20, 35, 6.5, 12.1, 7.0],
     ["Myoko", "巡洋艦", 7, 39200, 20.3, 15.6, 17, 4.5, 8, 10, 62, 76, 5.0, 40, 35.0, 7.1, 13.1, 8.2],
-    ["Mogami", "巡洋艦", 8, 39100, 155, 15,7, 10, 5.0, 8, 10, 62, 109, 5.0, 50, 34.5, 7.1, 12.1, 8.5],
+    ["Mogami", "巡洋艦", 8, 39100, 155, 15,7, 10, 5.0, 10, 62, 109, 5.0, 50, 34.5, 7.1, 12.1, 8.5],
     ["Ibuki", "巡洋艦", 9, 39000, 203, 16.5, 17, 5.0, 6, 10, 67, 120, 5.0, 83, 35.0, 7.3, 12.6, 8.5],
     ["Zao", "巡洋艦", 10, 40800, 203, 16.2, 19, 4.5, 6, 8, 76, 141, 5.0, 125, 34.5, 7.7, 12.6, 9.3],
     // ["艦名", "巡洋艦", Tier, HP, 主砲口径, 主砲射程, 主砲火災発生率, 副砲射程, 副砲火災発生率, 魚雷射程,魚雷速度,
@@ -68,17 +68,33 @@ var etctype = new Array(
 
 
 var jpdd = [
-    "","Umikaze","Wakatake"
+    "","Umikaze","Wakatake","Isokaze","Minekaze","Mutsuki","Fubuki","Hatsuharu","Akatsuki","Shiratsuyu","Kagero","Akizuki","Yugumo","Shimakaze","Tachibana","Kamikaze","Shinonome","Harekaze","","","",""
 ];
 
 var jpca = [
-    "","Hashidate","Chikuma","Tenryu","Kuma","Furutaka","Aoba","Myoko","Mogami","Ibuki","Zao","","",""
+    "","Hashidate","Chikuma","Tenryu","Kuma","Furutaka","Aoba","Myoko","Mogami","Ibuki","Zao","Katori","Iwakialpha","Yubari","Atago"
 ];
 
 var jpbb = [
-    "","Kawachi","Myogi","Kongo","Fuso","Nagato","Amagi","Izumo","Yamato","Mikasa","Ishizuchi"
+    "","Kawachi","Myogi","Kongo","Fuso","Nagato","Amagi","Izumo","Yamato","Mikasa","Ishizuchi","Mutsu","Ashitaka","Kii","Musahsi"
 ];
 
 var jpcv = [
-    "","Hosho","Zuiho","Ryujo","Hiryu","Shokaku","Taiho","Hakuryu"
+    "","Hosho","Zuiho","Ryujo","Hiryu","Shokaku","Taiho","Hakuryu","Kaga"
+];
+
+var ussdd = [
+    "","Sampsn","","","","","","","","","","","","","","","","","","","","",
+];
+
+var ussca = [
+    "","Sampsn","","","","","","","","","","","","","","","","","","","","",
+];
+
+var ussbb = [
+    "","Sampsn","","","","","","","","","","","","","","","","","","","","",
+];
+
+var usscv = [
+    "","Sampsn","","","","","","","","","","","","","","","","","","","","",
 ];
