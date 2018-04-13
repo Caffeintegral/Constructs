@@ -1,34 +1,125 @@
 function paste(){
     var text = document.form1.elements[target];
 }
-
+var selectedCountry ="";
 function countrySet(){
-    var selectedCountry ="";
+    // var selectedCountry ="";
     for(i = 1; i < 5; i++){
         switch (document.form1.country.selectedIndex){
             case 0: document.form1.type.options[i].text="" ; break;
-            case 1: document.form1.type.options[i].text= jptype[i]; break;
-            case 2: document.form1.type.options[i].text= ustype[i]; break;
-            case 3: document.form1.type.options[i].text= kmtype[i]; break;
-            case 4: document.form1.type.options[i].text= rutype[i]; break;
-            case 5: document.form1.type.options[i].text= uktype[i]; break;
-            case 6: document.form1.type.options[i].text= frtype[i]; break;
-            case 7: document.form1.type.options[i].text= patype[i]; break;
-            case 8: document.form1.type.options[i].text= potype[i]; break;
-            case 9: document.form1.type.options[i].text= ettype[i]; break;
+            case 1: document.form1.type.options[i].text= jptype[i]; selectedCountry= "jp"; break;
+            case 2: document.form1.type.options[i].text= ustype[i]; selectedCountry= "us"; break;
+            case 3: document.form1.type.options[i].text= kmtype[i]; selectedCountry= "km"; break;
+            case 4: document.form1.type.options[i].text= rutype[i]; selectedCountry= "ru"; break;
+            case 5: document.form1.type.options[i].text= uktype[i]; selectedCountry= "uk"; break;
+            case 6: document.form1.type.options[i].text= frtype[i]; selectedCountry= "fr"; break;
+            case 7: document.form1.type.options[i].text= patype[i]; selectedCountry= "pa"; break;
+            case 8: document.form1.type.options[i].text= potype[i]; selectedCountry= "po"; break;
+            case 9: document.form1.type.options[i].text= ettype[i]; selectedCountry= "et"; break;
         }
     }
     document.form1.type.selectedIndex=0;
 }
 
 function typeSet(){
-    for(i = 1; i < 20; i++){
-        switch(document.form1.type.selectedIndex){
-            case 0: document.form1.Name.options[i].text=""; break;
-            case 1: document.form1.Name.options[i].text= jpdd[i]; break;
-            case 2: document.form1.Name.options[i].text = jpca[i]; break;
-            case 3: document.form1.Name.options[i].text= jpbb[i]; break;
-            case 4: document.form1.Name.options[i].text= jpcv[i]; break;
+    if(selectedCountry == "jp"){
+        for(i = 1; i < 20; i++){
+            switch(document.form1.type.selectedIndex){
+                case 0: document.form1.Name.options[i].text=""; break;
+                case 1: document.form1.Name.options[i].text= jpdd[i]; break;
+                case 2: document.form1.Name.options[i].text = jpca[i]; break;
+                case 3: document.form1.Name.options[i].text= jpbb[i]; break;
+                case 4: document.form1.Name.options[i].text= jpcv[i]; break;
+            }
+        }
+        document.form1.Name.selectedIndex=0;
+    }
+    if(selectedCountry == "us"){
+        for(i = 1; i < 20; i++){
+            switch(document.form1.type.selectedIndex){
+                case 0: document.form1.Name.options[i].text=""; break;
+                case 1: document.form1.Name.options[i].text= usdd[i]; break;
+                case 2: document.form1.Name.options[i].text = usca[i]; break;
+                case 3: document.form1.Name.options[i].text= usbb[i]; break;
+                case 4: document.form1.Name.options[i].text= uscv[i]; break;
+            }
+        }
+    }
+    if(selectedCountry == "km"){
+        for(i = 1; i < 20; i++){
+            switch(document.form1.type.selectedIndex){
+                case 0: document.form1.Name.options[i].text=""; break;
+                case 1: document.form1.Name.options[i].text= kmdd[i]; break;
+                case 2: document.form1.Name.options[i].text = kmca[i]; break;
+                case 3: document.form1.Name.options[i].text= kmbb[i]; break;
+                case 4: document.form1.Name.options[i].text= kmcv[i]; break;
+            }
+        }
+    }
+    if(selectedCountry == "ru"){
+        for(i = 1; i < 20; i++){
+            switch(document.form1.type.selectedIndex){
+                case 0: document.form1.Name.options[i].text=""; break;
+                case 1: document.form1.Name.options[i].text= rudd[i]; break;
+                case 2: document.form1.Name.options[i].text = ruca[i]; break;
+                case 3: document.form1.Name.options[i].text= rubb[i]; break;
+                case 4: document.form1.Name.options[i].text= rucv[i]; break;
+            }
+        }
+    }
+    if(selectedCountry == "eu"){
+        for(i = 1; i < 20; i++){
+            switch(document.form1.type.selectedIndex){
+                case 0: document.form1.Name.options[i].text=""; break;
+                case 1: document.form1.Name.options[i].text= eudd[i]; break;
+                case 2: document.form1.Name.options[i].text = euca[i]; break;
+                case 3: document.form1.Name.options[i].text= eubb[i]; break;
+                case 4: document.form1.Name.options[i].text= eucv[i]; break;
+            }
+        }
+    }
+    if(selectedCountry == "fr"){
+        for(i = 1; i < 20; i++){
+            switch(document.form1.type.selectedIndex){
+                case 0: document.form1.Name.options[i].text=""; break;
+                case 1: document.form1.Name.options[i].text= frdd[i]; break;
+                case 2: document.form1.Name.options[i].text = frca[i]; break;
+                case 3: document.form1.Name.options[i].text= frbb[i]; break;
+                case 4: document.form1.Name.options[i].text= frcv[i]; break;
+            }
+        }
+    }
+    if(selectedCountry == "pa"){
+        for(i = 1; i < 20; i++){
+            switch(document.form1.type.selectedIndex){
+                case 0: document.form1.Name.options[i].text=""; break;
+                case 1: document.form1.Name.options[i].text= padd[i]; break;
+                case 2: document.form1.Name.options[i].text = paca[i]; break;
+                case 3: document.form1.Name.options[i].text= pabb[i]; break;
+                case 4: document.form1.Name.options[i].text= pacv[i]; break;
+            }
+        }
+    }
+    if(selectedCountry == "po"){
+        for(i = 1; i < 20; i++){
+            switch(document.form1.type.selectedIndex){
+                case 0: document.form1.Name.options[i].text=""; break;
+                case 1: document.form1.Name.options[i].text= podd[i]; break;
+                case 2: document.form1.Name.options[i].text = poca[i]; break;
+                case 3: document.form1.Name.options[i].text= pobb[i]; break;
+                case 4: document.form1.Name.options[i].text= pocv[i]; break;
+            }
+        }
+    }
+    if(selectedCountry == "et"){
+        for(i = 1; i < 20; i++){
+            switch(document.form1.type.selectedIndex){
+                case 0: document.form1.Name.options[i].text=""; break;
+                case 1: document.form1.Name.options[i].text= etdd[i]; break;
+                case 2: document.form1.Name.options[i].text = etca[i]; break;
+                case 3: document.form1.Name.options[i].text= etbb[i]; break;
+                case 4: document.form1.Name.options[i].text= etcv[i]; break;
+            }
         }
     }
 }
