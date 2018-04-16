@@ -67,14 +67,14 @@ function typeSet(){
             }
         }
     }
-    if(selectedCountry == "eu"){
+    if(selectedCountry == "uk"){
         for(i = 1; i < 20; i++){
             switch(document.form1.type.selectedIndex){
                 case 0: document.form1.Name.options[i].text=""; break;
-                case 1: document.form1.Name.options[i].text= eudd[i]; break;
-                case 2: document.form1.Name.options[i].text = euca[i]; break;
-                case 3: document.form1.Name.options[i].text= eubb[i]; break;
-                case 4: document.form1.Name.options[i].text= eucv[i]; break;
+                case 1: document.form1.Name.options[i].text= ukdd[i]; break;
+                case 2: document.form1.Name.options[i].text = ukca[i]; break;
+                case 3: document.form1.Name.options[i].text= ukbb[i]; break;
+                case 4: document.form1.Name.options[i].text= ukcv[i]; break;
             }
         }
     }
