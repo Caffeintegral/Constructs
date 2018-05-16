@@ -132,12 +132,24 @@
 			</tr>
 		</table>
 
+		<div class="counter">
+			<td align="right" colspan="3">現在のスキルポイント合計</td>
+			<td>
+				<input id="Count" name="Count" size="8" value="0"> point
+			</td>
+			<td>
+				<input type="button" value="リセット" onclick="allcheck(false);">
+			</td>
+
+			</tr>
+		</div>
+
 	<div class = "result">
 		<table border="1" style="background-color: #ffffff;">
 			<tr>
 				<td align="right" colspan="3">国籍</td>
 				<td>
-					<select name="country" onchange="countrySet()">
+					<select name="country" onchange="countrySet('shipname')">
 					<option value="">国籍を選択</option>
 					<option value="">日本</option>
 					<option value="">アメリカ</option>
@@ -148,7 +160,6 @@
 					<option value="">パンアジア</option>
 					<option value="">ポーランド</option>
 					<option value="">その他</option>
-					<!--<input type="text" name="Type" size="8" value=""> </td>-->
 					</select>
 				</td>
 			</tr>
@@ -157,12 +168,7 @@
 				<td>
 					<select name="type" onchange  ="typeSet()">
 						<option value="">艦種を選択</option>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
 					</select>
-					<!--<input type="text" name="Type" size="8" value=""> -->
 				</td>
 			</tr>
 			<tr>
@@ -170,34 +176,6 @@
 				<td>
 					<select name ="Name" id = "shipname" onchange="setship('shipname')">
 						<option value="">艦名を選択</option>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
-						<option value=""></option>
 					</select>
 					<!--<input type="search" id="Name" name="Name" value autocomplete="on" list="combolist" onchange="shipsearch()" onblur="setship()" size="12">-->
 				</td>
@@ -283,19 +261,97 @@
 					<input type="text" name="AHiding" size="8" value=""> km</td>
 			</tr>
 		</table>
-		<div class ="counter">
-			<td align="right" colspan="3">現在のスキルポイント合計</td>
-			<td>
-				<input  id="Count" name="Count" size="8" value="0"> point</td>
+	</div>
+	<div class = 'ugfields'>
+		<!-- <table border="1" style="background-color: #ffffff;">
+			<tr>
+				<td align="right" colspan="3">スロットA</td>
+				<td>
+					<select name="uga">
+						<option value="">アップグレードを選択</option>
+						<option value="">主兵装改良1</option>
+						<option value="">副兵装改良1</option>
+						<option value="">弾薬庫改良1</option>
+						<option value="">飛行機隊改良1</option>
+						<option value="">射撃システム改良0</option>
+						<option value="">応急工作班改良1</option>
+						<option value="">着弾観測機改良1</option>
+					</select>
+				</td>
 			</tr>
-		</div>
+			<tr>
+				<td align="right" colspan="3">スロットB</td>
+				<td>
+					<select name="ugb">
+						<option value="">アップグレードを選択</option>
+						<option value="">ダメージコントロールシステム改良1</option>
+						<option value="">推力改良1</option>
+						<option value="">操舵装置改良1</option>
+						<option value="">エンジンブースト改良1</option>
+						<option value="">水中聴音改良1</option>
+						<option value="">対空防御砲火改良1</option>
+						<option value="">警戒レーダー改良１</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td align="right" colspan="3">スロットC</td>
+				<td>
+					<select name="ugc">
+						<option value="">アップグレードを選択</option>
+						<option value="">主砲改良2</option>
+						<option value="">副砲改良2</option>
+						<option value="">射撃システム改良1</option>
+						<option value="">射撃管制室改良1</option>
+						<option value="">対空砲改良2</option>
+						<option value="">飛行機隊改良2</option>
+						<option value="">航空管制改良1</option>
+						<option value="">発煙装置改良1</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td align="right" colspan="3">スロットD</td>
+				<td>
+					<select name="ugc">
+						<option value="">アップグレードを選択</option>
+						<option value="">ダメージコントロールシステム改良2</option>
+						<option value="">推力改良2</option>
+						<option value="">操舵装置改良2</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td align="right" colspan="3">スロットE</td>
+				<td>
+					<select name="ugc">
+						<option value="">アップグレードを選択</option>
+						<option value="">隠蔽システム改良1</option>
+						<option value="">目標測距装置改良1</option>
+						<option value="">操舵装置改良3</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td align="right" colspan="3">スロットF</td>
+				<td>
+					<select name="ugc">
+						<option value="">アップグレードを選択</option>
+						<option value="">主砲改良3</option>
+						<option value="">副砲改良3</option>
+						<option value="">魚雷発射管改良3</option>
+						<option value="">射撃管制室改良1</option>
+						<option value="">射撃管制装置改良2</option>
+						<option value="">射撃管制室改良2</option>
+						<option value="">対空砲改良3</option>
+						<option value="">飛行機隊改良3</option>
+						<option value="">航空管制改良2</option>
+					</select>
+				</td>
+			</tr>
+		</table> -->
 	</div>
 </div>
-<datalist id="combolist">
-	<option value="Hashidate"></option>
-	<option value="Chikuma"></option>
-	<option value="Tenryu"></option>
-</datalist>
 </form>
 </body>
 </html>

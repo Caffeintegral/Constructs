@@ -2,123 +2,236 @@ function paste(){
     var text = document.form1.elements[target];
 }
 var selectedCountry ="";
-function countrySet(){
-    // var selectedCountry ="";
-    for(i = 1; i < 5; i++){
+function countrySet(idname){
+    var select1 = document.forms.form1.type;
+    var select2 = document.forms.form1.Name;
+    select1.options.length = 0;
+    var a = document.getElementById(idname);
+    console.log(a);
+    document.form1.Name.value = "";
+    document.form1.Tier.value = "";
+    document.form1.HP.value = "";
+    document.form1.Caliber.value = "";
+    document.form1.Range.value = "";
+    document.form1.Burn.value = "";
+    document.form1.SRange.value = "";
+    document.form1.SBurn.value = "";
+    document.form1.TRange.value = "";
+    document.form1.TSpeed.value = "";
+    document.form1.TLoad.value = "";
+    document.form1.AA.value = "";
+    document.form1.AADamage.value = "";
+    document.form1.Speed.value = "";
+    document.form1.Turn.value = "";
+    document.form1.Hiding.value = "";
+    document.form1.AHiding.value = "";
+
+    var typeNum;
+    switch (document.form1.country.selectedIndex) {
+        case 0: break;
+        case 1: typeNum = jptype; break;
+        case 2: typeNum = ustype; break;
+        case 3: typeNum = kmtype; break;
+        case 4: typeNum = rutype; break;
+        case 5: typeNum = uktype; break;
+        case 6: typeNum = frtype; break;
+        case 7: typeNum = patype; break;
+        case 8: typeNum = potype; break;
+        case 9: typeNum = etctype; break;
+    }
+
+    for(i = 1; i < typeNum.length; i++){
         switch (document.form1.country.selectedIndex){
             case 0: document.form1.type.options[i].text="" ; break;
-            case 1: document.form1.type.options[i].text= jptype[i]; selectedCountry= "jp"; break;
-            case 2: document.form1.type.options[i].text= ustype[i]; selectedCountry= "us"; break;
-            case 3: document.form1.type.options[i].text= kmtype[i]; selectedCountry= "km"; break;
-            case 4: document.form1.type.options[i].text= rutype[i]; selectedCountry= "ru"; break;
-            case 5: document.form1.type.options[i].text= uktype[i]; selectedCountry= "uk"; break;
-            case 6: document.form1.type.options[i].text= frtype[i]; selectedCountry= "fr"; break;
-            case 7: document.form1.type.options[i].text= patype[i]; selectedCountry= "pa"; break;
-            case 8: document.form1.type.options[i].text= potype[i]; selectedCountry= "po"; break;
-            case 9: document.form1.type.options[i].text= ettype[i]; selectedCountry= "et"; break;
+            case 1: select1.options[i] = new Option(jptype[i]); selectedCountry= "jp"; break;
+            case 2: select1.options[i] = new Option(ustype[i]); selectedCountry= "us"; break;
+            case 3: select1.options[i] = new Option(kmtype[i]); selectedCountry= "km"; break;
+            case 4: select1.options[i] = new Option(rutype[i]); selectedCountry= "ru"; break;
+            case 5: select1.options[i] = new Option(uktype[i]); selectedCountry= "uk"; break;
+            case 6: select1.options[i] = new Option(frtype[i]); selectedCountry= "fr"; break;
+            case 7: select1.options[i] = new Option(patype[i]); selectedCountry= "pa"; break;
+            case 8: select1.options[i] = new Option(potype[i]); selectedCountry= "po"; break;
+            case 9: select1.options[i] = new Option(etctype[i]); selectedCountry= "etc"; break;
         }
+        
     }
     document.form1.type.selectedIndex=0;
 }
 
 function typeSet(){
+    var select2 = document.forms.form1.Name;
+    select2.options.length = 0;
+    var shipNum;
+
+    document.form1.Name.value = "";
+    document.form1.Tier.value = "";
+    document.form1.HP.value = "";
+    document.form1.Caliber.value = "";
+    document.form1.Range.value = "";
+    document.form1.Burn.value = "";
+    document.form1.SRange.value = "";
+    document.form1.SBurn.value = "";
+    document.form1.TRange.value = "";
+    document.form1.TSpeed.value = "";
+    document.form1.TLoad.value = "";
+    document.form1.AA.value = "";
+    document.form1.AADamage.value = "";
+    document.form1.Speed.value = "";
+    document.form1.Turn.value = "";
+    document.form1.Hiding.value = "";
+    document.form1.AHiding.value = "";
+    
+
     if(selectedCountry == "jp"){
-        for(i = 1; i < 20; i++){
+        switch (document.form1.type.selectedIndex) {
+            case 0: break;
+            case 1: shipNum = jpdd; break;
+            case 2: shipNum = jpca; break;
+            case 3: shipNum = jpbb; break;
+            case 4: shipNum = jpcv; break;
+        }
+        for(i = 1; i < shipNum.length; i++){
             switch(document.form1.type.selectedIndex){
                 case 0: document.form1.Name.options[i].text=""; break;
-                case 1: document.form1.Name.options[i].text= jpdd[i]; break;
-                case 2: document.form1.Name.options[i].text = jpca[i]; break;
-                case 3: document.form1.Name.options[i].text= jpbb[i]; break;
-                case 4: document.form1.Name.options[i].text= jpcv[i]; break;
+                case 1: select2.options[i] = new Option(jpdd[i]); break;
+                case 2: select2.options[i] = new Option(jpca[i]); break;
+                case 3: select2.options[i] = new Option(jpbb[i]); break;
+                case 4: select2.options[i] = new Option(jpcv[i]); break;
             }
         }
         document.form1.Name.selectedIndex=0;
     }
     if(selectedCountry == "us"){
-        for(i = 1; i < 20; i++){
+        switch (document.form1.type.selectedIndex) {
+            case 0: break;
+            case 1: shipNum = usdd; break;
+            case 2: shipNum = usca; break;
+            case 3: shipNum = usbb; break;
+            case 4: shipNum = uscv; break;
+        }
+
+        for(i = 1; i < shipNum.length; i++){
             switch(document.form1.type.selectedIndex){
                 case 0: document.form1.Name.options[i].text=""; break;
-                case 1: document.form1.Name.options[i].text= usdd[i]; break;
-                case 2: document.form1.Name.options[i].text = usca[i]; break;
-                case 3: document.form1.Name.options[i].text= usbb[i]; break;
-                case 4: document.form1.Name.options[i].text= uscv[i]; break;
+                case 1: select2.options[i] = new Option(usdd[i]); break;
+                case 2: select2.options[i] = new Option(usca[i]); break;
+                case 3: select2.options[i] = new Option(usbb[i]); break;
+                case 4: select2.options[i] = new Option(uscv[i]); break;
             }
         }
     }
     if(selectedCountry == "km"){
-        for(i = 1; i < 20; i++){
+        switch (document.form1.type.selectedIndex) {
+            case 0: break;
+            case 1: shipNum = kmdd; break;
+            case 2: shipNum = kmca; break;
+            case 3: shipNum = kmbb; break;
+            case 4: shipNum = kmcv; break;
+        }
+        for(i = 1; i < shipNum.length; i++){
             switch(document.form1.type.selectedIndex){
                 case 0: document.form1.Name.options[i].text=""; break;
-                case 1: document.form1.Name.options[i].text= kmdd[i]; break;
-                case 2: document.form1.Name.options[i].text = kmca[i]; break;
-                case 3: document.form1.Name.options[i].text= kmbb[i]; break;
-                case 4: document.form1.Name.options[i].text= kmcv[i]; break;
+                case 1: select2.options[i] = new Option(kmdd[i]); break;
+                case 2: select2.options[i] = new Option(kmca[i]); break;
+                case 3: select2.options[i] = new Option(kmbb[i]); break;
+                case 4: select2.options[i] = new Option(kmcv[i]); break;
             }
         }
     }
     if(selectedCountry == "ru"){
-        for(i = 1; i < 20; i++){
+        switch (document.form1.type.selectedIndex) {
+            case 0: break;
+            case 1: shipNum = rudd; break;
+            case 2: shipNum = ruca; break;
+            case 3: shipNum = rubb; break;
+            // case 4: shipNum = rucv; break;
+        }
+        for(i = 1; i < shipNum.length; i++){
             switch(document.form1.type.selectedIndex){
                 case 0: document.form1.Name.options[i].text=""; break;
-                case 1: document.form1.Name.options[i].text= rudd[i]; break;
-                case 2: document.form1.Name.options[i].text = ruca[i]; break;
-                case 3: document.form1.Name.options[i].text= rubb[i]; break;
-                case 4: document.form1.Name.options[i].text= rucv[i]; break;
+                case 1: select2.options[i] = new Option(rudd[i]); break;
+                case 2: select2.options[i] = new Option(ruca[i]); break;
+                case 3: select2.options[i] = new Option(rubb[i]); break;
             }
         }
     }
     if(selectedCountry == "uk"){
-        for(i = 1; i < 20; i++){
+        switch (document.form1.type.selectedIndex) {
+            case 0: break;
+            case 1: shipNum = ukdd; break;
+            case 2: shipNum = ukca; break;
+            case 3: shipNum = ukbb; break;
+            // case 4: shipNum = ukcv; break;
+        }
+        for(i = 1; i < shipNum.length; i++){
             switch(document.form1.type.selectedIndex){
                 case 0: document.form1.Name.options[i].text=""; break;
-                case 1: document.form1.Name.options[i].text= ukdd[i]; break;
-                case 2: document.form1.Name.options[i].text = ukca[i]; break;
-                case 3: document.form1.Name.options[i].text= ukbb[i]; break;
-                case 4: document.form1.Name.options[i].text= ukcv[i]; break;
+                case 1: select2.options[i] = new Option(ukdd[i]); break;
+                case 2: select2.options[i] = new Option(ukca[i]); break;
+                case 3: select2.options[i] = new Option(ukbb[i]); break;
             }
         }
     }
     if(selectedCountry == "fr"){
-        for(i = 1; i < 20; i++){
+        switch (document.form1.type.selectedIndex) {
+            case 0: break;
+            case 1: shipNum = frdd; break;
+            case 2: shipNum = frca; break;
+            case 3: shipNum = frbb; break;
+            // case 4: shipNum = frcv; break;
+        }
+        for(i = 1; i < shipNum.length; i++){
             switch(document.form1.type.selectedIndex){
                 case 0: document.form1.Name.options[i].text=""; break;
-                case 1: document.form1.Name.options[i].text= frdd[i]; break;
-                case 2: document.form1.Name.options[i].text = frca[i]; break;
-                case 3: document.form1.Name.options[i].text= frbb[i]; break;
-                case 4: document.form1.Name.options[i].text= frcv[i]; break;
+                case 1: select2.options[i] = new Option(frdd[i]); break;
+                case 2: select2.options[i] = new Option(frca[i]); break;
+                case 3: select2.options[i] = new Option(frbb[i]); break;
             }
         }
     }
     if(selectedCountry == "pa"){
-        for(i = 1; i < 20; i++){
+        switch (document.form1.type.selectedIndex) {
+            case 0: break;
+            case 1: shipNum = padd; break;
+            case 2: shipNum = paca; break;
+            // case 3: shipNum = pabb; break;
+            // case 4: shipNum = pacv; break;
+        }
+        for(i = 1; i < shipNum.length; i++){
             switch(document.form1.type.selectedIndex){
                 case 0: document.form1.Name.options[i].text=""; break;
-                case 1: document.form1.Name.options[i].text= padd[i]; break;
-                case 2: document.form1.Name.options[i].text = paca[i]; break;
-                case 3: document.form1.Name.options[i].text= pabb[i]; break;
-                case 4: document.form1.Name.options[i].text= pacv[i]; break;
+                case 1: select2.options[i] = new Option(padd[i]); break;
+                case 2: select2.options[i] = new Option(paca[i]); break;
             }
         }
     }
     if(selectedCountry == "po"){
-        for(i = 1; i < 20; i++){
+        switch (document.form1.type.selectedIndex) {
+            case 0: break;
+            case 1: shipNum = podd; break;
+            // case 2: shipNum = poca; break;
+            // case 3: shipNum = pobb; break;
+            // case 4: shipNum = pocv; break;
+        }
+        for(i = 1; i < shipNum.length; i++){
             switch(document.form1.type.selectedIndex){
                 case 0: document.form1.Name.options[i].text=""; break;
-                case 1: document.form1.Name.options[i].text= podd[i]; break;
-                case 2: document.form1.Name.options[i].text = poca[i]; break;
-                case 3: document.form1.Name.options[i].text= pobb[i]; break;
-                case 4: document.form1.Name.options[i].text= pocv[i]; break;
+                case 1: select2.options[i] = new Option(podd[i]); break;
             }
         }
     }
-    if(selectedCountry == "et"){
-        for(i = 1; i < 20; i++){
+    if(selectedCountry == "etc"){
+        switch (document.form1.type.selectedIndex) {
+            case 0: break;
+            case 1: shipNum = etcdd; break;
+            case 2: shipNum = etcca; break;
+            case 3: shipNum = etcbb; break;
+            // case 4: shipNum = etccv; break;
+        }
+        for(i = 1; i < shipNum.length; i++){
             switch(document.form1.type.selectedIndex){
                 case 0: document.form1.Name.options[i].text=""; break;
-                case 1: document.form1.Name.options[i].text= etdd[i]; break;
-                case 2: document.form1.Name.options[i].text = etca[i]; break;
-                case 3: document.form1.Name.options[i].text= etbb[i]; break;
-                case 4: document.form1.Name.options[i].text= etcv[i]; break;
+                case 1: select2.options[i] = new Option(etcdd[i]); break;
             }
         }
     }
@@ -572,4 +685,32 @@ function d8(ischecked) {
     }
 }
 
+function allcheck(re) {
+    var count = document.form1.elements.length;
+    for (i = 0; i < count; i++) {
+        document.form1.elements[i].checked = re;
+    }
+    document.form1.Count.value = 0;
 
+    for (i = 0; i < shipdata.length; i++) {
+        if (shipdata[i][0] == document.form1.Name.value) {
+            document.form1.Tier.value = shipdata[i][2];
+            document.form1.HP.value = shipdata[i][3];
+            document.form1.Caliber.value = shipdata[i][4];
+            document.form1.Range.value = shipdata[i][5];
+            document.form1.Burn.value = shipdata[i][6];
+            document.form1.SRange.value = shipdata[i][7];
+            document.form1.SBurn.value = shipdata[i][8];
+            document.form1.TRange.value = shipdata[i][9];
+            document.form1.TSpeed.value = shipdata[i][10];
+            document.form1.TLoad.value = shipdata[i][11];
+            document.form1.AA.value = shipdata[i][12];
+            document.form1.AADamage.value = shipdata[i][13];
+            document.form1.Speed.value = shipdata[i][14];
+            document.form1.Turn.value = shipdata[i][15];
+            document.form1.Hiding.value = shipdata[i][16];
+            document.form1.AHiding.value = shipdata[i][17];
+            break;
+        }
+    }
+}
