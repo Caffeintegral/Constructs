@@ -262,12 +262,12 @@
 			</tr>
 		</table>
 	</div>
-	<div class = 'ugfields'>
+	<!-- <div class = 'ugfields'>
 		<table border="1" style="background-color: #ffffff;">
 			<tr>
 				<td align="right" colspan="3">スロットA</td>
 				<td>
-					<select name="uga">
+					<select name="uga" onChange="ugA(this.checked);">
 						<option value="">アップグレードを選択</option>
 						<option value="">主兵装改良1</option>
 						<option value="">副兵装改良1</option>
@@ -282,7 +282,7 @@
 			<tr>
 				<td align="right" colspan="3">スロットB</td>
 				<td>
-					<select name="ugb">
+					<select name="ugb" onChange="ugB()">
 						<option value="">アップグレードを選択</option>
 						<option value="">ダメージコントロールシステム改良1</option>
 						<option value="">推力改良1</option>
@@ -297,7 +297,7 @@
 			<tr>
 				<td align="right" colspan="3">スロットC</td>
 				<td>
-					<select name="ugc">
+					<select name="ugc" onChange="ugC()">
 						<option value="">アップグレードを選択</option>
 						<option value="">主砲改良2</option>
 						<option value="">副砲改良2</option>
@@ -313,7 +313,7 @@
 			<tr>
 				<td align="right" colspan="3">スロットD</td>
 				<td>
-					<select name="ugc">
+					<select name="ugd" onChange="ugD()">
 						<option value="">アップグレードを選択</option>
 						<option value="">ダメージコントロールシステム改良2</option>
 						<option value="">推力改良2</option>
@@ -324,7 +324,7 @@
 			<tr>
 				<td align="right" colspan="3">スロットE</td>
 				<td>
-					<select name="ugc">
+					<select name="uge" onChange="ugE()">
 						<option value="">アップグレードを選択</option>
 						<option value="">隠蔽システム改良1</option>
 						<option value="">目標測距装置改良1</option>
@@ -335,7 +335,7 @@
 			<tr>
 				<td align="right" colspan="3">スロットF</td>
 				<td>
-					<select name="ugc">
+					<select name="ugf" onChange="ugF();">
 						<option value="">アップグレードを選択</option>
 						<option value="">主砲改良3</option>
 						<option value="">副砲改良3</option>
@@ -349,6 +349,124 @@
 					</select>
 				</td>
 			</tr>
+		</table>
+	</div> -->
+
+	<div class='ugfields'>
+		<table border="1" style="background-color: #ffffff;">
+			<tr class="uga">
+				<th colspan="7">スロットA</th>
+			</tr>
+			<div class="slotA">
+				<tr>
+					<td>
+						<input type="checkbox" value="on" onclick="ug1_1(this.checked);" id="ug1_1">
+						<label for ="ug1_1">主兵装改良1</label>
+					</td>
+					<td>
+						<input type="checkbox" value="on" onclick="ug1_2(this.checked);" id="ug1_2">
+						<label for="ug1_2">副兵装改良1</label>
+					</td>
+					<td>
+						<input type="checkbox" value="on" onclick="ug1_3(this.checked);" id="ug1_3">
+						<label for="ug1_3">弾薬庫改良1</label>
+					</td>
+					<td>
+						<input type="checkbox" value="on" onclick="ug1_4(this.checked);" id="ug1_4">
+						<label for="ug1_4">飛行機隊改良1</label>
+					</td>
+					<td>
+						<input type="checkbox" value="on" onclick="ug1_5(this.checked);" id="ug1_5">
+						<label for="ug1_5">射撃システム改良0</label>
+					</td>
+					<td>
+						<input type="checkbox" value="on" onclick="ug1_6(this.checked);" id="ug1_6">
+						<label for="ug1_6">応急工作班改良1</label>
+					</td>
+					<td>
+						<input type="checkbox" value="on" onclick="ug1_7(this.checked);" id="ug1_7">
+						<label for="ug1_7">着弾観測機改良1</label>
+					</td>
+				</tr>
+			</div>
+
+			<tr class="ugb">
+				<th colspan="7">スロットB</th>
+			</tr>
+			<div class="slotB">
+				<tr>
+					<td>
+						<input type="checkbox" value="on" onclick="ug2_1(this.checked);" id="ug2_1">
+						<label for="ug2_1">ダメージコントロールシステム改良1</label>
+					</td>
+					<td>
+						<input type="checkbox" value="on" onclick="ug2_2(this.checked);" id="ug2_2">
+						<label for="ug2_2">推力改良1</label>
+					</td>
+					<td>
+						<input type="checkbox" value="on" onclick="ug2_3(this.checked);" id="ug2_3">
+						<label for="ug2_3">操舵装置改良1</label>
+					</td>
+					<td>
+						<input type="checkbox" value="on" onclick="ug2_4(this.checked);" id="ug2_4">
+						<label for="ug2_4">エンジンブースト改良1</label>
+					</td>
+					<td>
+						<input type="checkbox" value="on" onclick="ug2_5(this.checked);" id="ug2_5">
+						<label for="ug2_5">水中聴音改良1</label>
+					</td>
+					<td>
+						<input type="checkbox" value="on" onclick="ug2_6(this.checked);" id="ug2_6">
+						<label for="ug2_6">対空防御砲火改良1</label>
+					</td>
+					<td>
+						<input type="checkbox" value="on" onclick="ug2_7(this.checked);" id="ug2_7">
+						<label for="ug2_7">警戒レーダー改良１</label>
+					</td>
+				</tr>
+			</div>
+
+			<tr class="ugc">
+				<th colspan="8">スロットC</th>
+			</tr>
+			<div class="slotC">
+				<tr>
+					<td>
+						<input type="checkbox" value="on" onclick="ug3_1(this.checked);" id="ug3_1">
+						<label for="ug3_1">主砲改良2</label>
+					</td>
+					<td>
+						<input type="checkbox" value="on" onclick="ug3_2(this.checked);" id="ug3_2">
+						<label for="ug3_2">副砲改良2</label>
+					</td>
+					<td>
+						<input type="checkbox" value="on" onclick="ug3_3(this.checked);" id="ug3_3">
+						<label for="ug3_3">射撃システム改良1</label>
+					</td>
+					<td>
+						<input type="checkbox" value="on" onclick="ug3_4(this.checked);" id="ug3_4">
+						<label for="ug3_4">射撃管制室改良1</label>
+					</td>
+					<td>
+						<input type="checkbox" value="on" onclick="ug3_5(this.checked);" id="ug3_5">
+						<label for="ug3_5">対空砲改良2</label>
+					</td>
+					<td>
+						<input type="checkbox" value="on" onclick="ug3_6(this.checked);" id="ug3_6">
+						<label for="ug3_6">飛行機隊改良2</label>
+					</td>
+					<td>
+						<input type="checkbox" value="on" onclick="ug3_7(this.checked);" id="ug3_7">
+						<label for="ug3_7">航空管制改良1</label>
+					</td>
+					<td>
+						<input type="checkbox" value="on" onclick="ug3_8(this.checked);" id="ug3_8">
+						<label for="ug3_8">発煙装置改良1</label>
+					</td>
+				</tr>
+			</div>
+
+
 		</table>
 	</div>
 </div>

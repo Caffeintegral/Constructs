@@ -714,3 +714,42 @@ function allcheck(re) {
         }
     }
 }
+
+function ugA(ischecked){
+    var slotA = document.form1.uga;
+    index = slotA.selectedIndex;
+    switch(index){
+        case 0: break;
+        case 1: break;
+        case 2: break;
+        case 3: break;
+        case 4: break;
+        case 5: a(ischecked);  break;
+        case 6: break;
+        case 7: break;
+    }
+}
+
+function a(ischecked){
+    console.log("aaa");
+    if (ischecked == true) {
+        if (document.form1.Type.value == "駆逐艦") {
+            document.form1.Hiding.value *= 0.90;
+            document.form1.AHiding.value *= 0.90;
+        }
+        if (document.form1.Type.value == "巡洋艦") {
+            document.form1.Hiding.value *= 0.88;
+            document.form1.AHiding.value *= 0.88;
+        }
+        if (document.form1.Type.value == "戦艦") {
+            document.form1.Hiding.value *= 0.86;
+            document.form1.AHiding.value *= 0.86;
+        }
+        if (document.form1.Type.value == "航空母艦") {
+            document.form1.Hiding.value *= 0.84;
+            document.form1.AHiding.value *= 0.84;
+        }
+    }
+}
+
+
