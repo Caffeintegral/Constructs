@@ -346,39 +346,39 @@ function d8(ischecked) {
     if (ischecked == true) {
         var count = parseInt(document.form1.Count.value) + 4;
         document.form1.Count.value = count;
-
-        if (document.form1.Type.value == "駆逐艦") {
+        console.log(document.form1.type.value);
+        if (document.form1.type.value == "駆逐艦") {
             document.form1.Hiding.value *= 0.90;
             document.form1.AHiding.value *= 0.90;
         }
-        if (document.form1.Type.value == "巡洋艦") {
+        if (document.form1.type.value == "巡洋艦") {
             document.form1.Hiding.value *= 0.88;
             document.form1.AHiding.value *= 0.88;
         }
-        if (document.form1.Type.value == "戦艦") {
+        if (document.form1.type.value == "戦艦") {
             document.form1.Hiding.value *= 0.86;
             document.form1.AHiding.value *= 0.86;
         }
-        if (document.form1.Type.value == "航空母艦") {
+        if (document.form1.type.value == "航空母艦") {
             document.form1.Hiding.value *= 0.84;
             document.form1.AHiding.value *= 0.84;
         }
     } else {
         var count = parseInt(document.form1.Count.value) - 4;
         document.form1.Count.value = count;
-        if (document.form1.Type.value == "駆逐艦") {
+        if (document.form1.type.value == "駆逐艦") {
             document.form1.Hiding.value /= 0.90;
             document.form1.AHiding.value /= 0.90;
         }
-        if (document.form1.Type.value == "巡洋艦") {
+        if (document.form1.type.value == "巡洋艦") {
             document.form1.Hiding.value /= 0.88;
             document.form1.AHiding.value /= 0.88;
         }
-        if (document.form1.Type.value == "戦艦") {
+        if (document.form1.type.value == "戦艦") {
             document.form1.Hiding.value /= 0.86;
             document.form1.AHiding.value /= 0.86;
         }
-        if (document.form1.Type.value == "航空母艦") {
+        if (document.form1.type.value == "航空母艦") {
             document.form1.Hiding.value /= 0.84;
             document.form1.AHiding.value /= 0.84;
         }
