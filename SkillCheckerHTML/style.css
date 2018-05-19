@@ -1,38 +1,311 @@
+@import url('https://fonts.googleapis.com/css?family=Dokdo|Hi+Melody|Jura:700');
+
+html, body { height: 100%; width: 100%;font-size:0; }
 body {
   font-family: "Yu Gothic";
   font-family: 'Yu Gothic';
-  font-size:0.9rem;
+  background-color: #F2FCFC;
+  color: #0245A3;
 }
-div.mainField{
-  width:1040px;
-  margin:0 auto;
+h1{
+  font-family: 'Jura', sans-serif;
+  font-size: 70px;
+  color:#0245A3;
 }
-div.mainField table.skillSelect tr td{
-  width:120px;
-  height:80px;
-  text-align:center;
-  border:1px #999 solid;
-  border-radius:8px;
+h2{
+  font-family: "Rounded Mplus 1c";
+  color:#0245A3;
+  margin-top:10px;
+  font-size:30px;
+  margin-bottom: 15px;
+  display :block;
+  clear: both;
 }
-div.mainField table.skillSelect tr td input[type=checkbox]{
-  display:none;
+h3{
+  font-family: "Rounded Mplus 1c";
+  color:#0245A3;
+  font-size:22px;
+  margin-top: 5px;
+  padding :5px;
+  display: block;
+  clear: both;
 }
-div.mainField table.skillSelect tr td label{
-  height:100%;
-  width:100%;
+.box{
+	width:30%;
+	display: block;
+	float: left;
+	padding :5px;
+	margin-bottom: 10px;
+}
+.box-b{
+	display: block;
+	float:left;
+	width: 40%;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+#hidari p{
+  font-size: 25px;
+  font-family: 'Hi Melody', cursive;
+  position: absolute;
+  bottom: 0;
   display:block;
-  padding:12px 0px 0px 0px;
-
 }
-div.mainField table.skillSelect tr td input[type=checkbox]:checked + label{
-	background: #badcad;
-	color: #ffffff;
-  height:100%;
-  width:100%;
-  display:block;
-  border-radius:8px;
-
+#hidari p a{
+  color:#1255B3;
+}
+#hidari{
+  height: 100vh;
+  width: 15vw;
+  display: block;
+  float: left;
+  background-color: #8FBAF3; 
+  padding: 10px;
+}
+#naka{
+  height: 100vh;
+  width:30vw;
+  margin: 0;
+  display: block;
+  float: left;
+  background-color:#BDF1F6; 
+  padding: 10px;
+}
+#migi{
+  height: 100vh;
+  width:54vw;
+  padding:10px;
+  margin: 0;
+  display: block;
+  float: left;
+  font-size: 10px;
+}
+/*艦長スキルのとこ*/
+.captain{
+	width: 100%;
+	height: 50%;
+}
+.category{
+	position: relative;
+    margin: 2em 1em;
+    padding: 0.5em 1em;
+	width: 23%;
+	float: left;	
+	padding :5px;
+	border : 3px solid #0245A3;
+	border-radius: 0px 10px 10px 10px;
+}
+.category .title {
+    position: absolute;
+    display: inline-block;
+    top: -27px;
+    left: -3px;
+    padding: 0 9px;
+    height: 25px;
+    line-height: 25px;
+    vertical-align: middle;
+    font-size: 17px;
+    background: #0245A3;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0;
+}
+.category p {
+    margin: 0; 
+    padding: 0;
+}
+.category h3{
+	margin:0 auto;
+	text-align: center;
+	position: relative;
+	background: #BDF1F6;
+	top:-30px;
+}
+table.skillSelect tr td{
+	width:120px;
+	height:80px;
+	text-align:center;
+	border:1px #999 solid;
+	border-radius:8px;
+  }
+table.skillSelect tr td input[type=checkbox]{
+	display:none;
+  }
+ table.skillSelect tr td label{
+	height:100%;
+	width:100%;
+	display:block;
+	padding:12px 0px 0px 0px;
+  
+  }
+table.skillSelect tr td input[type=checkbox]:checked + label{
+   background: #badcad;
+   color: #ffffff;
+	height:100%;
+	width:100%;
+	display:block;
+	border-radius:8px;
+  
+  }
+/*SelectBox*/
+.cp_ipselect {
+	position: relative;
+	width: 90%;
+	margin: 2em auto;
+	text-align: center;
+}
+.cp_sl06 {
+	position: relative;
+	font-family: inherit;
+	background-color: transparent;
+	width: 100%;
+	padding: 10px 10px 10px 0;
+	font-size: 18px;
+	border-radius: 0;
+	border: none;
+	border-bottom: 1px solid rgba(0,0,0, 0.3);
+}
+.cp_sl06:focus {
+	outline: none;
+	border-bottom: 1px solid rgba(0,0,0, 0);
+}
+.cp_ipselect .cp_sl06 {
+	appearance: none;
+	-webkit-appearance:none
+}
+.cp_ipselect select::-ms-expand {
+	display: none;
+}
+.cp_ipselect:after {
+	position: absolute;
+	top: 18px;
+	right: 10px;
+	width: 0;
+	height: 0;
+	padding: 0;
+	content: '';
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid rgba(0, 0, 0, 0.3);
+	pointer-events: none;
+}
+.cp_sl06_selectlabel {
+	color: rgba(0,0,0, 0.5);
+	font-size: 18px;
+	font-weight: normal;
+	position: absolute;
+	pointer-events: none;
+	left: 0;
+	top: 10px;
+	transition: 0.2s ease all;
+}
+.cp_sl06:focus ~ .cp_sl06_selectlabel, .cp_sl06:valid ~ .cp_sl06_selectlabel {
+	color: #0245A3;
+	top: -20px;
+	transition: 0.2s ease all;
+	font-size: 18px;
+}
+.cp_sl06_selectbar {
+	position: relative;
+	display: block;
+	width: 100%;
+}
+.cp_sl06_selectbar:before, .cp_sl06_selectbar:after {
+	content: '';
+	height: 2px;
+	width: 0;
+	bottom: 1px;
+	position: absolute;
+	background: #0245A3;
+	transition: 0.2s ease all;
+}
+.cp_sl06_selectbar:before {
+	left: 50%;
+}
+.cp_sl06_selectbar:after {
+	right: 50%;
+}
+.cp_sl06:focus ~ .cp_sl06_selectbar:before, .cp_sl06:focus ~ .cp_sl06_selectbar:after {
+	width: 50%;
+}
+.cp_sl06_highlight {
+	position: absolute;
+	top: 25%;
+	left: 0;
+	pointer-events: none;
+	opacity: 0.5;
+}
+/*ただのinput*/
+input{
+	border: 0;
+	background-color: #f8f8f8;
+	font-size: 18px;
+	text-align: right;
+	color: #0245A3;
 }
 
-div.mainField table.skillSelect{
+/*Table*/
+table.company {
+
+	padding-left: 10px;
+	padding-right: 5px;
+	border-collapse: separate;
+	border-spacing: 0px 10px;
+	font-size: 12px;
+	float: left;
+}
+
+table.company th,
+table.company td {
+	padding: 10px;
+}
+
+table.company th {
+	background: #295890;
+	vertical-align: middle;
+	text-align: left;
+	width: 130px;
+	overflow: visible;
+	position: relative;
+	color: #fff;
+	font-weight: normal;
+	font-size: 15px;
+}
+
+table.company th:after {
+	left: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(136, 183, 213, 0);
+	border-left-color: #295890;
+	border-width: 10px;
+	margin-top: -10px;
+}
+/* firefox */
+@-moz-document url-prefix() { 
+	table.company th::after {
+		float: right;
+		padding: 0;
+		left: 30px;
+		top: 10px;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: relative;
+		pointer-events: none;
+		border: 10px solid transparent;
+		border-left: #295890 10px solid;
+		margin-top: -10px;
+	}
+}
+
+table.company td {
+	background: #f8f8f8;
+	padding-left: 20px;
+	font-size: 16px;
 }
