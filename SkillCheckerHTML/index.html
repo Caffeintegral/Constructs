@@ -3,156 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <title>SkillChecker</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 <link rel = "stylesheet" type"text/css" href="style.css">
+<link href="https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css" rel="stylesheet" />
 <script src="skillcheck.js"></script>
 <script src="setShip.js"></script>
 <script src="upgrade.js"></script>
 <script src="data.js"></script>
-
 </head>
+
 <body>
 <form action="#" name="form1">
-<div class = "mainField">
-	<table class = "skillSelect" able border="0">
-		<tr class = "top">
-			<th colspan="2">継戦</th>
-			<th colspan="2">攻撃</th>
-			<th colspan="2">支援</th>
-			<th colspan="2">汎用</th>
-		</tr>
-
-		<div class = "content">
-			<tr>
-				<td>
-					<input type="checkbox" value="on" onclick="a1(this.checked);" id="p1_1"><label for="p1_1">危険察知</label>
-				</td>
-				<td>
-					<input type="checkbox" value="on" onclick="a2(this.checked);" id="p1_2"><label for="p1_2">予防整備</label>
-				</td>
-				<td>
-					<input type="checkbox" value="on" onclick="a3(this.checked);" id="p1_3"><label for="p1_3">熟練装填手</label>
-				</td>
-				<td>
-					<input type="checkbox" value="on" onclick="a4(this.checked);" id="p1_4"><label for="p1_4">航空機整備専門家</label>
-				</td>
-				<td>
-					<input type="checkbox" value="on" onclick="a5(this.checked);" id="p1_5"><label for="p1_5">水上機指揮所</label>
-				</td>
-				<td>
-					<input type="checkbox" value="on" onclick="a6(this.checked);" id="p1_6"><label for="p1_6">ドッグファイト・エース</label>
-				</td>
-				<td>
-					<input type="checkbox" value="on" onclick="a7(this.checked);" id="p1_7"><label for="p1_7">敵弾接近警報</label>
-				</td>
-				<td>
-					<input type="checkbox" value="on" onclick="a8(this.checked);" id="p1_8"><label for="p1_8">回避軌道</label>
-				</td>
-			</tr>
-		</div>
-		<div class = "content">
-			<tr>
-				<td>
-					<input type="checkbox" value="on" onclick="b1(this.checked);" id="p2_1"><label for="p2_1">厳戒態勢</label>
-				</td>
-				<td>
-					<input type="checkbox" value="on" onclick="b2(this.checked);" id="p2_2"><label for="p2_2">なんでも屋</label>
-				</td>
-				<td>
-					<input type="checkbox" value="on" onclick="b3(this.checked);" id="p2_3"><label for="p2_3">熟練砲手</label>
-				</td>
-				<td>
-					<input type="checkbox" value="on" onclick="b4(this.checked);" id="p2_4"><label for="p2_4">雷速向上</label>
-				</td>
-				<td>
-					<input type="checkbox" value="on" onclick="b5(this.checked);" id="p2_5"><label for="p2_5">煙幕専門家</label>
-				</td>
-				<td>
-					<input type="checkbox" value="on" onclick="b6(this.checked);" id="p2_6"><label for="p2_6">エース後部銃手</label>
-				</td>
-				<td>
-					<input type="checkbox" value="on" onclick="b7(this.checked);" id="p2_7"><label for="p2_7">アドレナリンラッシュ</label>
-				</td>
-				<td>
-					<input type="checkbox" value="on" onclick="b8(this.checked);" id="p2_8"><label for="p2_8">最後の抵抗</label>
-				</td>
-			</tr>
-		</div>
-		<div class = "content">
-			<tr>
-				<td>
-					<input type="checkbox" value="on" onclick="c1(this.checked);" id="p3_1"><label for="p3_1">応急対応の基本</label>
-				</td>
-				<td>
-					<input type="checkbox" value="on" onclick="c2(this.checked);" id="p3_2"><label for="p3_2">抗堪専門家</label>
-				</td>
-				<td>
-					<input type="checkbox" value="on" onclick="c3(this.checked);" id="p3_3"><label for="p3_3">魚雷専門家</label>
-				</td>
-				<td>
-					<input type="checkbox" value="on" onclick="c4(this.checked);" id="p3_4"><label for="p3_4">緊急発艦</label>
-				</td>
-				<td>
-					<input type="checkbox" value="on" onclick="c5(this.checked);" id="p3_5"><label for="p3_5">基本射撃訓練</label>
-				</td>
-				<td>
-					<input type="checkbox" value="on" onclick="c6(this.checked);" id="p3_6"><label for="p3_6">管理</label>
-				</td>
-				<td>
-					<input type="checkbox" value="on" onclick="c7(this.checked);" id="p3_7"><label for="p3_7">爆発物専門家</label>
-				</td>
-				<td>
-					<input type="checkbox" value="on" onclick="c8(this.checked);" id="p3_8"><label for="p3_8">警戒</label>
-				</td>
-			</tr>
-		</div>
-		<div class = "content">
-			<tr>
-				<td>
-					<input type="checkbox" value="on" onclick="d1(this.checked);" id="p4_1"><label for="p4_1">副砲の手動制御</label>
-				</td>
-				<td>
-					<input type="checkbox" value="on" onclick="d2(this.checked);" id="p4_2"><label for="p4_2">防火</label>
-				</td>
-				<td>
-					<input type="checkbox" value="on" onclick="d3(this.checked);" id="p4_3"><label for="p4_3">榴弾用慣性信管</label>
-				</td>
-				<td>
-					<input type="checkbox" value="on" onclick="d4(this.checked);" id="p4_4"><label for="p4_4">制空権</label>
-				</td>
-				<td>
-					<input type="checkbox" value="on" onclick="d5(this.checked);" id="p4_5"><label for="p4_5">上級射撃訓練</label>
-				</td>
-				<td>
-					<input type="checkbox" value="on" onclick="d6(this.checked);" id="p4_6"><label for="p4_6">対空兵装の手動制御</label>
-				</td>
-				<td>
-					<input type="checkbox" value="on" onclick="d7(this.checked);" id="p4_7"><label for="p4_7">無線方向探知</label>
-				</td>
-				<td>
-					<input type="checkbox" value="on" onclick="d8(this.checked);" id="p4_8"><label for="p4_8">隠蔽処理専門家</label>
-				</td>
-			</tr>
-		</table>
-
-		<div class="counter">
-			<td align="right" colspan="3">現在のスキルポイント合計</td>
-			<td>
-				<input id="Count" name="Count" size="8" value="0" readonly> point
-			</td>
-			<td>
-				<input type="button" value="リセット" onclick="allcheck(false);">
-			</td>
-
-			</tr>
-		</div>
-
-	<div class = "result">
-		<table border="1" style="background-color: #ffffff;">
-			<tr>
-				<td align="right" colspan="3">国籍</td>
-				<td>
-					<select name="country" onchange="countrySet('shipname')">
-					<option value="">国籍を選択</option>
+	<div id="hidari">
+		<h1>Skill</h1>
+		<h1>Check</h1>
+		<h1>Sheet</h1>
+		<h1>for</h1>
+		<h1>WoWs</h1>
+		<p>Created by <a href="http://twitter.com/caffeintegral/">せなちゃん</a><br>
+		Styled by <a href="http://twitter.com/takumin_inu/">unotovive<br>
+		<a href="#">&copy;グリーンティータイム</a></p>
+	</div>
+	<div id="naka">
+		<div class="box">
+			<h2>国籍</h2>
+			<div class="cp_ipselect">
+				<select class="cp_sl06" required name="country" onchange="countrySet('shipname')" >
+					<option value="" hidden disabled selected></option>
 					<option value="">日本</option>
 					<option value="">アメリカ</option>
 					<option value="">ドイツ</option>
@@ -162,330 +39,281 @@
 					<option value="">パンアジア</option>
 					<option value="">ポーランド</option>
 					<option value="">その他</option>
-					</select>
-				</td>
-			</tr>
+				</select>
+				<span class="cp_sl06_highlight"></span>
+				<span class="cp_sl06_selectbar"></span>
+				<label class="cp_sl06_selectlabel">Choose</label>
+			</div>
+		</div>
+		<div class="box">
+			<h2>艦種</h2>
+			<div class="cp_ipselect">
+				<select class="cp_sl06" required name="type" onchange  ="typeSet()" >
+					<option value="" hidden disabled selected></option>
+				</select>
+				<span class="cp_sl06_highlight"></span>
+				<span class="cp_sl06_selectbar"></span>
+				<label class="cp_sl06_selectlabel">Choose</label>
+			</div>
+		</div>
+		<div class="box-b">
+		<h2>艦名</h2>
+			<div class="cp_ipselect">
+				<select class="cp_sl06" required name ="Name" id = "shipname" onchange="setship('shipname')">
+					<option value="" hidden disabled selected></option>
+				</select>
+				<span class="cp_sl06_highlight"></span>
+				<span class="cp_sl06_selectbar"></span>
+				<label class="cp_sl06_selectlabel">Choose</label>
+			</div>
+		</div>
+		<h3>基本情報</h3>
+		<table class="company"style="width:47%;">
 			<tr>
-				<td align="right" colspan="3">艦種</td>
-				<td>
-					<select name="type" onchange  ="typeSet()">
-						<option value="">艦種を選択</option>
-					</select>
-				</td>
-			</tr>
-			<tr>
-				<td align="right" colspan="3">艦名</td>
-				<td>
-					<select name ="Name" id = "shipname" onchange="setship('shipname')">
-						<option value="">艦名を選択</option>
-					</select>
-				</td>
-			</tr>
-			<tr>
-				<td align="right" colspan="3">Tier</td>
-				<td>
-					<input type="text" name="Tier" size="8" value="" readonly> </td>
-			</tr>
-			<tr>
-				<td align="right" colspan="3">HP</td>
-				<td>
-					<input type="text" name="HP" size="8" value="" readonly> </td>
-			</tr>
-			<tr>
-				<td align="right" colspan="3">主砲口径</td>
-				<td>
-					<input type="text" name="Caliber" size="8" value="" readonly> mm</td>
-			</tr>
-			<tr>
-				<td align="right" colspan="3">主砲射程</td>
-				<td>
-					<input type="text" name="Range" size="8" value="" readonly> km</td>
-			</tr>
-			<tr>
-				<td align="right" colspan="3">主砲火災発生率</td>
-				<td>
-					<input type="text" name="Burn" size="8" value="" readonly> %</td>
-			</tr>
-			<tr>
-				<td align="right" colspan="3">副砲射程</td>
-				<td>
-					<input type="text" name="SRange" size="8" value="" readonly> km</td>
-			</tr>
-			<tr>
-				<td align="right" colspan="3">副砲火災発生率</td>
-				<td>
-					<input type="text" name="SBurn" size="8" value="" readonly> %</td>
-			</tr>
-			<tr>
-				<td align="right" colspan="3">魚雷射程</td>
-				<td>
-					<input type="text" name="TRange" size="8" value="" readonly> km</td>
-			</tr>
-			<tr>
-				<td align="right" colspan="3">魚雷速度</td>
-				<td>
-					<input type="text" name="TSpeed" size="8" value="" readonly> knot</td>
-			</tr>
-			<tr>
-				<td align="right" colspan="3">魚雷装填時間</td>
-				<td>
-					<input type="text" name="TLoad" size="8" value="" readonly> 秒</td>
-			</tr>
-			<tr>
-				<td align="right" colspan="3">最長対空砲距離</td>
-				<td>
-					<input type="text" name="AA" size="8" value="" readonly> km</td>
-			</tr>
-			<tr>
-				<td align="right" colspan="3">最長対空砲秒間平均ダメージ</td>
-				<td>
-					<input type="text" name="AADamage" size="8" value="" readonly> </td>
-			</tr>
-			<tr>
-				<td align="right" colspan="3">最大速度</td>
-				<td>
-					<input type="text" name="Speed" size="8" value="" readonly> knot</td>
-			</tr>
-			<tr>
-				<td align="right" colspan="3">転舵所要時間</td>
-				<td>
-					<input type="text" name="Turn" size="8" value="" readonly> 秒</td>
-			</tr>
-			<tr>
-				<td align="right" colspan="3">海面発見距離</td>
-				<td>
-					<input type="text" name="Hiding" size="8" value="" readonly> km</td>
-			</tr>
-			<tr>
-				<td align="right" colspan="3">航空発見距離</td>
-				<td>
-					<input type="text" name="AHiding" size="8" value="" readonly> km</td>
+				<th class="arrow_box">Tier</div></th>
+				<td><input type="text" name="Tier" size="4" value="" readonly></td>
 			</tr>
 		</table>
-	</div>
-
-	<div class='ugfields'>
-		<table border="1" style="background-color: #ffffff;">
-			<tr class="uga">
-				<th colspan="7">スロットA</th>
+		<table class="company" style="width:47%;">
+			<tr>
+				<th class="arrow_box">HP</div></th>
+				<td><input type="text" name="HP" size="4" value="" readonly></td>
 			</tr>
-			<div class="slotA">
-				<tr>
-					<td>
-						<input type="checkbox" value="on" onclick="ugA_1(this.checked);" id="ug1_1">
-						<label for ="ug1_1">主兵装改良1</label>
-					</td>
-					<td>
-						<input type="checkbox" value="on" onclick="ugA_2(this.checked);" id="ug1_2">
-						<label for="ug1_2">副兵装改良1</label>
-					</td>
-					<td>
-						<input type="checkbox" value="on" onclick="ugA_3(this.checked);" id="ug1_3">
-						<label for="ug1_3">弾薬庫改良1</label>
-					</td>
-					<td>
-						<input type="checkbox" value="on" onclick="ugA_4(this.checked);" id="ug1_4">
-						<label for="ug1_4">飛行機隊改良1</label>
-					</td>
-					<td>
-						<input type="checkbox" value="on" onclick="ugA_5(this.checked);" id="ug1_5">
-						<label for="ug1_5">射撃システム改良0</label>
-					</td>
-					<td>
-						<input type="checkbox" value="on" onclick="ugA_6(this.checked);" id="ug1_6">
-						<label for="ug1_6">応急工作班改良1</label>
-					</td>
-					<td>
-						<input type="checkbox" value="on" onclick="ugA_7(this.checked);" id="ug1_7">
-						<label for="ug1_7">着弾観測機改良1</label>
-					</td>
-				</tr>
-			</div>
-			<tr class="ugb">
-				<th colspan="7">スロットB</th>
-			</tr>
-			<div class="slotB">
-				<tr>
-					<td>
-						<input type="checkbox" value="on" onclick="ugB_1(this.checked);" id="ug2_1">
-						<label for="ug2_1">ダメージコントロールシステム改良1</label>
-					</td>
-					<td>
-						<input type="checkbox" value="on" onclick="ugB_2(this.checked);" id="ug2_2">
-						<label for="ug2_2">推力改良1</label>
-					</td>
-					<td>
-						<input type="checkbox" value="on" onclick="ugB_3(this.checked);" id="ug2_3">
-						<label for="ug2_3">操舵装置改良1</label>
-					</td>
-					<td>
-						<input type="checkbox" value="on" onclick="ugB_4(this.checked);" id="ug2_4">
-						<label for="ug2_4">エンジンブースト改良1</label>
-					</td>
-					<td>
-						<input type="checkbox" value="on" onclick="ugB_5(this.checked);" id="ug2_5">
-						<label for="ug2_5">水中聴音改良1</label>
-					</td>
-					<td>
-						<input type="checkbox" value="on" onclick="ugB_6(this.checked);" id="ug2_6">
-						<label for="ug2_6">対空防御砲火改良1</label>
-					</td>
-					<td>
-						<input type="checkbox" value="on" onclick="ugB_7(this.checked);" id="ug2_7">
-						<label for="ug2_7">警戒レーダー改良１</label>
-					</td>
-				</tr>
-			</div>
-			<tr class="ugc">
-				<th colspan="8">スロットC</th>
-			</tr>
-			<div class="slotC">
-				<tr>
-					<td>
-						<input type="checkbox" value="on" onclick="ugC_1(this.checked);" id="ug3_1">
-						<label for="ug3_1">主砲改良2</label>
-					</td>
-					<td>
-						<input type="checkbox" value="on" onclick="ugC_2(this.checked);" id="ug3_2">
-						<label for="ug3_2">副砲改良2</label>
-					</td>
-					<td>
-						<input type="checkbox" value="on" onclick="ugC_3(this.checked);" id="ug3_3">
-						<label for="ug3_3">射撃システム改良1</label>
-					</td>
-					<td>
-						<input type="checkbox" value="on" onclick="ugC_4(this.checked);" id="ug3_4">
-						<label for="ug3_4">射撃管制室改良1</label>
-					</td>
-					<td>
-						<input type="checkbox" value="on" onclick="ugC_5(this.checked);" id="ug3_5">
-						<label for="ug3_5">対空砲改良2</label>
-					</td>
-					<td>
-						<input type="checkbox" value="on" onclick="ugC_6(this.checked);" id="ug3_6">
-						<label for="ug3_6">飛行機隊改良2</label>
-					</td>
-					<td>
-						<input type="checkbox" value="on" onclick="ugC_7(this.checked);" id="ug3_7">
-						<label for="ug3_7">航空管制改良1</label>
-					</td>
-					<td>
-						<input type="checkbox" value="on" onclick="ugC_8(this.checked);" id="ug3_8">
-						<label for="ug3_8">発煙装置改良1</label>
-					</td>
-				</tr>
-			</div>
-			<tr class="ugd">
-				<th colspan="3">スロットD</th>
-			</tr>
-			<div class="slotD">
-				<tr>
-					<td>
-						<input type="checkbox" value="on" onclick="ugD_1(this.checked);" id="ug4_1">
-						<label for="ug4_1">ダメージコントロールシステム改良2</label>
-					</td>
-					<td>
-						<input type="checkbox" value="on" onclick="ugD_2(this.checked);" id="ug4_2">
-						<label for="ug4_2">推力改良2</label>
-					</td>
-					<td>
-						<input type="checkbox" value="on" onclick="ugD_3(this.checked);" id="ug4_3">
-						<label for="ug4_3">操舵装置改良2</label>
-					</td>
-				</tr>
-			</div>
-			<tr class="uge">
-				<th colspan="3">スロットE</th>
-			</tr>
-			<div class="slotE">
-				<tr>
-					<td>
-						<input type="checkbox" value="on" onclick="ugE_1(this.checked);" id="ug5_1">
-						<label for="ug5_1">隠蔽システム改良1</label>
-					</td>
-					<td>
-						<input type="checkbox" value="on" onclick="ugE_2(this.checked);" id="ug5_2">
-						<label for="ug5_2">目標測距装置改良1</label>5
-					</td>
-					<td>
-						<input type="checkbox" value="on" onclick="ugE_3(this.checked);" id="ug5_3">
-						<label for="ug5_3">操舵装置改良3</label>
-					</td>
-				</tr>
-			</div>
-			<tr class="ugf">
-				<th colspan="9">スロットC</th>
-			</tr>
-			<div class="slotF">
-				<tr>
-					<td>
-						<input type="checkbox" value="on" onclick="ugF_1(this.checked);" id="ug6_1">
-						<label for="ug6_1">主砲改良3</label>
-					</td>
-					<td>
-						<input type="checkbox" value="on" onclick="ugF_2(this.checked);" id="ug6_2">
-						<label for="ug6_2">副砲改良3</label>
-					</td>
-					<td>
-						<input type="checkbox" value="on" onclick="ugF_3(this.checked);" id="ug6_3">
-						<label for="ug6_3">魚雷発射管改良3</label>
-					</td>
-					<td>
-						<input type="checkbox" value="on" onclick="ugF_4(this.checked);" id="ug6_4">
-						<label for="ug6_4">射撃管制装置改良2</label>
-					</td>
-					<td>
-						<input type="checkbox" value="on" onclick="ugF_5(this.checked);" id="ug6_5">
-						<label for="ug6_5">射撃管制室改良2</label>
-					</td>
-					<td>
-						<input type="checkbox" value="on" onclick="ugF_6(this.checked);" id="ug6_6">
-						<label for="ug6_6">対空砲改良3</label>
-					</td>
-					<td>
-						<input type="checkbox" value="on" onclick="ugF_7(this.checked);" id="ug6_7">
-						<label for="ug6_7">飛行機隊改良3</label>
-					</td>
-					<td>
-						<input type="checkbox" value="on" onclick="ugF_8(this.checked);" id="ug6_8">
-						<label for="ug6_8">航空管制改良2</label>
-					</td>
-				</tr>
-			</div>
-			<tr class="etc">
-				<th colspan="9">その他</th>
-			</tr>
-			<div class="Etc">
-				<tr>
-					<td>
-						<input type="checkbox" value="on" onclick="camoflage(this.checked);" id="etc1">
-						<label for="etc1">迷彩</label>
-					</td>
-					<td>
-						<input type="checkbox" value="on" onclick="AAFlag(this.checked);" id="etc2">
-						<label for="etc2">November Echo Setteseven</label>
-					</td>
-					<td>
-						<input type="checkbox" value="on" onclick="SWFlag(this.checked);" id="etc3">
-						<label for="etc3">Mike Yankee Soxisix</label>
-					</td>
-					<td>
-						<input type="checkbox" value="on" onclick="indiaFlag(this.checked);" id="etc4">
-						<label for="etc4">India X-Ray</label>
-					</td>
-					<td>
-						<input type="checkbox" value="on" onclick="hurricaneFlag(this.checked);" id="etc5">
-						<label for="etc5">Victor Lima</label>
-					</td>
-					<td>
-						<input type="checkbox" value="on" onclick="speedFlag(this.checked);" id="etc6">
-						<label for="etc6">Sierra Mike</label>
-					</td>
-				</tr>
-			</div>
 		</table>
+		<table class="company" style="width:47%;">
+			<tr>
+				<th class="arrow_box">最大速度</div></th>
+				<td><input type="text" name="Speed" size="4" value="" readonly>kt</td>
+			</tr>
+		</table>
+		<table class="company" style="width:47%;">
+			<tr>
+				<th class="arrow_box">転舵所要時間</div></th>
+				<td><input type="text" name="Turn" size="4" value="" readonly>秒</td>
+			</tr>
+		</table>
+		<h3>隠蔽</h3>
+		<table class="company" style="width:47%;">
+			<tr>
+				<th class="arrow_box">海面発見距離</div></th>
+				<td><input type="text" name="Hiding" size="4" value="" readonly>km</td>
+			</tr>
+		</table>
+		<table class="company" style="width:47%;">
+			<tr>
+				<th class="arrow_box">航空発見距離</div></th>
+				<td><input type="text" name="AHiding" size="4" value="" readonly>km</td>
+			</tr>
+		</table>
+		<h3>兵装</h3>
+		<table class="company" style="width:94%;">
+			<tr>
+				<th class="arrow_box">主砲射程</div></th>
+				<td><input type="text" name="Range" size="4" value="" readonly> km</td>
+			</tr>
+		</table>
+		<table class="company" style="width:47%;">
+		<tr>
+			<th class="arrow_box">主砲口径</div></th>
+			<td><input type="text" name="Caliber" size="4" value="" readonly>mm</td>
+		</tr>
+		</table>		
+		<table class="company" style="width:47%;">
+			<tr>
+				<th class="arrow_box">主砲火災発生率</div></th>
+				<td><input type="text" name="Burn" size="4" value="" readonly>%</td>
+			</tr>
+		</table>	
+		<table class="company" style="width:47%;">
+			<tr>
+				<th class="arrow_box">副砲射程</div></th>
+				<td><input type="text" name="SRange" size="4" value="" readonly>km</td>
+			</tr>
+		</table>
+		<table class="company" style="width:47%;">
+			<tr>
+				<th class="arrow_box">副砲火災発生率</div></th>
+				<td><input type="text" name="SBurn" size="4" value="" readonly>%</td>
+			</tr>
+		</table>
+		<table class="company" style="width:94%;">
+			<tr>
+				<th class="arrow_box">魚雷射程</div></th>
+				<td><input type="text" name="TRange" size="4" value="" readonly>km</td>
+			</tr>
+		</table>
+		<table class="company" style="width:47%;">
+			<tr>
+				<th class="arrow_box">魚雷速度</div></th>
+				<td><input type="text" name="TSpeed" size="4" value="" readonly>kt</td>
+			</tr>
+		</table>	
+		<table class="company" style="width:47%;">
+			<tr>
+				<th class="arrow_box">魚雷装填時間</div></th>
+				<td><input type="text" name="TLoad" size="4" value="" readonly>秒</td>
+			</tr>
+		</table>	
+		<table class="company" style="width:47%;">
+			<tr>
+				<th class="arrow_box">最長対空砲距離     </div></th>
+				<td><input type="text" name="AA" size="4" value="" readonly>km</td>
+			</tr>
+		</table>	
+		<table class="company" style="width:47%;">
+			<tr>
+				<th class="arrow_box" style="padding-top: 0 ;padding-bottom: 0;padding-left: 10;">最長対空砲秒間平均ダメージ</div></th>
+				<td><input type="text" name="AADamage" size="4" value="" readonly>km</td>
+			</tr>
+		</table>			
 	</div>
-</div>
+	<div id="migi">
+		<div class="captain">
+			<h2>艦長スキル</h2>
+			<div class="category">
+				<h3 class="title">継戦</h3>
+				<table class = "skillSelect" able border="0">
+            		<div class = "content">
+						<tr>
+							<td>
+								<input type="checkbox" value="on" onclick="a1(this.checked);" id="p1_1"><label for="p1_1">危険察知</label>
+							</td>
+							<td>
+								<input type="checkbox" value="on" onclick="a2(this.checked);" id="p1_2"><label for="p1_2">予防整備</label>
+							</td>
+							<td>
+								<input type="checkbox" value="on" onclick="b1(this.checked);" id="p2_1"><label for="p2_1">厳戒態勢</label>
+							</td>
+							<td>
+								<input type="checkbox" value="on" onclick="b2(this.checked);" id="p2_2"><label for="p2_2">なんでも屋</label>
+							</td>
+							<td>
+								<input type="checkbox" value="on" onclick="c1(this.checked);" id="p3_1"><label for="p3_1">応急対応の基本</label>
+							</td>
+							<td>
+								<input type="checkbox" value="on" onclick="c2(this.checked);" id="p3_2"><label for="p3_2">抗堪専門家</label>
+							</td>
+							<td>
+								<input type="checkbox" value="on" onclick="d1(this.checked);" id="p4_1"><label for="p4_1">副砲の手動制御</label>
+							</td>
+							<td>
+								<input type="checkbox" value="on" onclick="d2(this.checked);" id="p4_2"><label for="p4_2">防火</label>
+							</td>
+						</tr>
+					</div>
+				</table>
+			</div>
+			<div class="category">
+				<h3>継戦</h3>
+				<table class = "skillSelect" able border="0">
+					<div class = "content">
+						<tr>
+							<td>
+								<input type="checkbox" value="on" onclick="a3(this.checked);" id="p1_3"><label for="p1_3">熟練装填手</label>
+							</td>
+							<td>
+								<input type="checkbox" value="on" onclick="a4(this.checked);" id="p1_4"><label for="p1_4">航空機整備専門家</label>
+							</td>
+							<td>
+								<input type="checkbox" value="on" onclick="b3(this.checked);" id="p2_3"><label for="p2_3">熟練砲手</label>
+							</td>
+							<td>
+								<input type="checkbox" value="on" onclick="b4(this.checked);" id="p2_4"><label for="p2_4">雷速向上</label>
+							</td>
+							<td>
+								<input type="checkbox" value="on" onclick="c3(this.checked);" id="p3_3"><label for="p3_3">魚雷専門家</label>
+							</td>
+							<td>
+								<input type="checkbox" value="on" onclick="c4(this.checked);" id="p3_4"><label for="p3_4">緊急発艦</label>
+							</td>
+							<td>
+								<input type="checkbox" value="on" onclick="d3(this.checked);" id="p4_3"><label for="p4_3">榴弾用慣性信管</label>
+							</td>
+							<td>
+								<input type="checkbox" value="on" onclick="d4(this.checked);" id="p4_4"><label for="p4_4">制空権</label>
+							</td>
+						</tr>
+					</div>
+				</table>
+			</div>
+			<div class="category">
+				<h3>継戦</h3>
+				<table class = "skillSelect" able border="0">
+					<div class = "content">
+						<tr>
+							<td>
+								<input type="checkbox" value="on" onclick="a5(this.checked);" id="p1_5"><label for="p1_5">水上機指揮所</label>
+							</td>
+							<td>
+								<input type="checkbox" value="on" onclick="a6(this.checked);" id="p1_6"><label for="p1_6">ドッグファイト・エース</label>
+							</td>
+							<td>
+								<input type="checkbox" value="on" onclick="b5(this.checked);" id="p2_5"><label for="p2_5">煙幕専門家</label>
+							</td>
+							<td>
+								<input type="checkbox" value="on" onclick="b6(this.checked);" id="p2_6"><label for="p2_6">エース後部銃手</label>
+							</td>
+							<td>
+								<input type="checkbox" value="on" onclick="c5(this.checked);" id="p3_5"><label for="p3_5">基本射撃訓練</label>
+							</td>
+							<td>
+								<input type="checkbox" value="on" onclick="c6(this.checked);" id="p3_6"><label for="p3_6">管理</label>
+							</td>
+							<td>
+								<input type="checkbox" value="on" onclick="d5(this.checked);" id="p4_5"><label for="p4_5">上級射撃訓練</label>
+							</td>
+							<td>
+								<input type="checkbox" value="on" onclick="d6(this.checked);" id="p4_6"><label for="p4_6">対空兵装の手動制御</label>
+							</td>
+						</tr>
+					</div>
+				</table>
+			</div>
+			<div class="category">
+				<h3>継戦</h3>
+				<table class = "skillSelect" able border="0">
+					<div class = "content">
+						<tr>
+							<td>
+								<input type="checkbox" value="on" onclick="a7(this.checked);" id="p1_7"><label for="p1_7">敵弾接近警報</label>
+							</td>
+							<td>
+								<input type="checkbox" value="on" onclick="a8(this.checked);" id="p1_8"><label for="p1_8">回避軌道</label>
+							</td>
+							<td>
+								<input type="checkbox" value="on" onclick="b7(this.checked);" id="p2_7"><label for="p2_7">アドレナリンラッシュ</label>
+							</td>
+							<td>
+								<input type="checkbox" value="on" onclick="b8(this.checked);" id="p2_8"><label for="p2_8">最後の抵抗</label>
+							</td>
+							<td>
+								<input type="checkbox" value="on" onclick="c7(this.checked);" id="p3_7"><label for="p3_7">爆発物専門家</label>
+							</td>
+							<td>
+								<input type="checkbox" value="on" onclick="c8(this.checked);" id="p3_8"><label for="p3_8">警戒</label>
+							</td>
+							<td>
+								<input type="checkbox" value="on" onclick="d7(this.checked);" id="p4_7"><label for="p4_7">無線方向探知</label>
+							</td>
+							<td>
+								<input type="checkbox" value="on" onclick="d8(this.checked);" id="p4_8"><label for="p4_8">隠蔽処理専門家</label>
+							</td>
+						</tr>
+					</div>
+				</table>
+			</div>
+			<div class="counter">
+				<td align="right" colspan="3">現在のスキルポイント合計</td>
+				<td>
+					<input id="Count" name="Count" size="8" value="0" readonly> point
+				</td>
+				<td>
+					<input type="button" value="リセット" onclick="allcheck(false);">
+				</td>
+				</tr>
+			</div>
+		</div>	
+	</div>
 </form>
 </body>
 </html>
