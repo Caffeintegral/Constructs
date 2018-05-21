@@ -77,7 +77,7 @@
 		<table class="company" style="width:47%;">
 			<tr>
 				<th class="arrow_box">HP</div></th>
-				<td><input type="text" name="HP" size="4" value="" readonly></td>
+				<td><input type="text" name="HP" size="5" value="" readonly></td>
 			</tr>
 		</table>
 		<table class="company" style="width:47%;">
@@ -163,13 +163,24 @@
 		<table class="company" style="width:47%;">
 			<tr>
 				<th class="arrow_box" style="padding-top: 0 ;padding-bottom: 0;padding-left: 10;">最長対空砲秒間平均ダメージ</div></th>
-				<td><input type="text" name="AADamage" size="4" value="" readonly>km</td>
+				<td><input type="text" name="AADamage" size="4" value="" readonly></td>
 			</tr>
 		</table>			
 	</div>
 	<div id="migi">
 		<div class="captain">
-			<h2>艦長スキル</h2>
+			<div class="captain-top">
+				<div class="captain-box">
+					<h2>艦長スキル</h2>
+				</div>
+				<div class="captain-box">
+						<div class="counter">
+						現在のスキルポイント合計
+						<input id="Count" name="Count" size="8" value="0" readonly> point
+						<input type="button" value="リセット" onclick="allcheck(false);">
+					</div>
+				</div>
+			</div>
 			<div class="category">
 				<h3 class="title">継戦</h3>
 				<div class="checkbox04 box-c">
@@ -373,17 +384,166 @@
 						<span class="checkbox04-parts">隠蔽処理<br>専門家</span>
 					</label>
 				</div>
-			<div class="counter">
-				<td align="right" colspan="3">現在のスキルポイント合計</td>
-				<td>
-					<input id="Count" name="Count" size="8" value="0" readonly> point
-				</td>
-				<td>
-					<input type="button" value="リセット" onclick="allcheck(false);">
-				</td>
-				</tr>
 			</div>
-		</div>	
+		</div>
+		<div class="captain-m">
+			<div class="captain-top">
+				<div class="captain-box">
+					<h2>アップグレード</h2>
+				</div>
+			</div>
+			<div class="box-s" style="clear: both;">
+				<h3>SlotA</h3>
+				<div class="cp_ipselect">
+					<select class="cp_sl06" required name="" id="ugA" onchange="ug_A()" >
+						<option value="" hidden disabled selected></option>
+						<option value="a1">装備しない</option>
+						<option value="a2">主兵装改良Ⅰ</option>
+						<option value="a3">副兵装改良Ⅰ</option>
+						<option value="a4">弾薬庫改良Ⅰ</option>
+						<option value="a5">飛行機隊改良Ⅰ</option>
+						<option value="a6">射撃システム改良0</option>
+						<option value="a7">応急工作班改良Ⅰ</option>
+						<option value="a8">着弾観測機改良Ⅰ</option>
+					</select>
+					<span class="cp_sl06_highlight"></span>
+					<span class="cp_sl06_selectbar"></span>
+					<label class="cp_sl06_selectlabel-m">Choose</label>
+				</div>
+			</div>
+			<div class="box-s">
+				<h3>SlotB</h3>
+				<div class="cp_ipselect">
+					<select class="cp_sl06" required name="" id="ugB" onchange="ug_B()" >
+						<option value="" hidden disabled selected></option>
+						<option value="b1">装備しない</option>
+						<option value="b2">ダメージコントロールシステム改良Ⅰ</option>
+						<option value="b3">推力改良Ⅰ</option>
+						<option value="b4">操舵装置改良Ⅰ</option>
+						<option value="b5">エンジンブースト改良Ⅰ</option>
+						<option value="b6">水中聴音改良Ⅰ</option>
+						<option value="b7">対空防御放火改良Ⅰ</option>
+						<option value="b8">警戒レーダー改良Ⅰ</option>
+					</select>
+					<span class="cp_sl06_highlight"></span>
+					<span class="cp_sl06_selectbar"></span>
+					<label class="cp_sl06_selectlabel-m">Choose</label>
+				</div>
+			</div>
+			<div class="box-s">
+				<h3>SlotC</h3>
+				<div class="cp_ipselect">
+					<select class="cp_sl06" required name="" id="ugC" onchange="ug_C()" >
+						<option value="" hidden disabled selected></option>
+						<option value="c1">装備しない</option>
+						<option value="c2">主砲改良Ⅱ</option>
+						<option value="c3">副砲改良Ⅱ</option>
+						<option value="c4">射撃システム改良Ⅰ</option>
+						<option value="c5">射撃管制室改良Ⅰ</option>
+						<option value="c6">対空砲改良Ⅱ</option>
+						<option value="c7">飛行機隊改良Ⅱ</option>
+						<option value="c8">航空管制改良Ⅰ</option>
+						<option value="c9">発煙装置改良Ⅰ</option>
+					</select>
+					<span class="cp_sl06_highlight"></span>
+					<span class="cp_sl06_selectbar"></span>
+					<label class="cp_sl06_selectlabel-m">Choose</label>
+				</div>
+			</div>
+			<div class="box-s">
+				<h3>SlotD</h3>
+				<div class="cp_ipselect">
+					<select class="cp_sl06" required name="" id="ugD" onchange="ug_D()" >
+						<option value="" hidden disabled selected></option>
+						<option value="d1">装備しない</option>
+						<option value="d2">ダメージコントロールシステム改良Ⅱ</option>
+						<option value="d3">推力改良Ⅱ</option>
+						<option value="d4">操舵装置改良Ⅱ</option>
+					</select>
+					<span class="cp_sl06_highlight"></span>
+					<span class="cp_sl06_selectbar"></span>
+					<label class="cp_sl06_selectlabel-m">Choose</label>
+				</div>
+			</div>
+			<div class="box-s">
+				<h3>SlotE</h3>
+				<div class="cp_ipselect">
+					<select class="cp_sl06" required name="" id="ugE" onchange="ug_E()" >
+						<option value="" hidden disabled selected></option>
+						<option value="e1">装備しない</option>
+						<option value="e2">隠蔽システム改良Ⅰ</option>
+						<option value="e3">目標測距装置改良Ⅰ</option>
+						<option value="e4">操舵装置改良Ⅲ</option>
+					</select>
+					<span class="cp_sl06_highlight"></span>
+					<span class="cp_sl06_selectbar"></span>
+					<label class="cp_sl06_selectlabel-m">Choose</label>
+				</div>
+			</div>
+			<div class="box-s">
+				<h3>SlotF</h3>
+				<div class="cp_ipselect">
+					<select class="cp_sl06" required name="" id="ugF" onchange="ug_F()" >
+						<option value="" hidden disabled selected></option>
+						<option value="f1">装備しない</option>
+						<option value="f2">主砲改良Ⅲ</option>
+						<option value="f3">副砲改良Ⅲ</option>
+						<option value="f4">魚雷発射管改良Ⅲ</option>
+						<option value="f5">射撃管制装置改良Ⅱ</option>
+						<option value="f6">射撃管制室改良Ⅱ</option>
+						<option value="f7">対空砲改良Ⅲ</option>
+						<option value="f8">飛行機隊改良Ⅲ</option>
+						<option value="f9">航空管制改良Ⅱ</option>
+					</select>
+					<span class="cp_sl06_highlight"></span>
+					<span class="cp_sl06_selectbar"></span>
+					<label class="cp_sl06_selectlabel-m">Choose</label>
+				</div>
+			</div>
+		</div>
+		<div class="captain-m">
+			<div class="captain-top">
+				<div class="captain-box">
+				<h2>迷彩&信号旗</h2>
+				</div>
+			</div>
+			<div class="checkbox04 box-c2">
+				<label for="etc1">
+					<input class="checkbox04-input" type="checkbox" value="on" onclick="camoflage(this.checked);" id="etc1">
+					<span class="checkbox04-parts">迷彩</span>
+				</label>
+			</div>
+			<div class="checkbox04 box-c2">
+				<label for="etc2">
+					<input class="checkbox04-input" type="checkbox" value="on" onclick="AAFlag(this.checked);" id="etc2">
+					<span class="checkbox04-parts">November Echo Setteseven</span>
+				</label>
+			</div>
+			<div class="checkbox04 box-c2">
+				<label for="etc3">
+					<input class="checkbox04-input" type="checkbox" value="on" onclick="SWFlag(this.checked);" id="etc3">
+					<span class="checkbox04-parts">Mike Yankee Soxisix</span>
+				</label>
+			</div>
+			<div class="checkbox04 box-c2">
+				<label for="etc4">
+					<input class="checkbox04-input" type="checkbox" value="on" onclick="indiaFlag(this.checked);" id="etc4">
+					<span class="checkbox04-parts">India X-Ray</span>
+				</label>
+			</div>
+			<div class="checkbox04 box-c2">
+				<label for="etc5">
+					<input class="checkbox04-input" type="checkbox" value="on" onclick="hurricaneFlag(this.checked);" id="etc5">
+					<span class="checkbox04-parts">Victor Lima</span>
+				</label>
+			</div>
+			<div class="checkbox04 box-c2">
+				<label for="etc6">
+					<input class="checkbox04-input" type="checkbox" value="on" onclick="speedFlag(this.checked);" id="etc6">
+					<span class="checkbox04-parts">Sierra Mike</span>
+				</label>
+			</div>
+		</div>
 	</div>
 </form>
 </body>
