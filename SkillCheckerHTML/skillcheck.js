@@ -352,7 +352,7 @@ function d8(ischecked) {
         console.log(document.form1.type.value);
 
         if (document.form1.type.value == "駆逐艦") {
-            document.form1.Hiding.value = 0.90;
+            document.form1.Hiding.value *= 0.90;
             document.form1.AHiding.value *= 0.90;
         }
         if (document.form1.type.value == "巡洋艦") {
