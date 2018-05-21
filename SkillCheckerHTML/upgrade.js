@@ -183,9 +183,7 @@ function ugD_3(ischecked){ //操舵装置改良2
 
 var flagE = 0;
 function ug_E(){
-    consol.log("aaa");
     switch(flagE){
-        case 0: consol.log("aaa"); break;
         case 1: break;
         case 2: ugE_1(false); break;
         case 3: ugE_2(false); break;
@@ -208,7 +206,6 @@ function ugE_0(ischecked) { //隠蔽システム改良1
 }
 
 function ugE_1(ischecked){ //隠蔽システム改良1
-    consol.log("aaa");
     if(ischecked == true){
         flagE = 2;
         document.form1.Hiding.value *= 0.9;
@@ -369,56 +366,3 @@ function speedFlag(ischecked){
     }
 }
 
-var flagE = 0;
-function ug_E(){
-    switch(flagE){
-        case 0: break;
-        case 1: ugE_1t(false); break;
-        case 2: ugE_2t(false); break;
-        case 3: ugE_3t(false); break;
-    }
-    switch(document.form1.ugE.value){
-        case "e_0": break;
-        case "e_1": ugE_1t(true); break;
-        case "e_2": ugE_2t(true); break;
-        case "e_3": ugE_3t(true); break;
-    }
-}
-var temp ;
-
-function ugE_0t(ischecked){ //未選択
-    
-    if(ischecked == true){
-        flag = 0;
-    } else{
-    }
-}
-
-function ugE_1t(ischecked){ //隠蔽システム改良1
-    
-    if(ischecked == true){
-        flag = 1;
-        temp = document.form1.Hiding.value;
-        document.form1.Hiding.value *= 0.9;
-    } else{
-        document.form1.Hiding.value = temp;
-    }
-}
-function ugE_2t(ischecked){ //目標測距装置改良1
-    
-    if(ischecked == true){
-        flag = 2;
-        
-    } else{
-
-    }
-}
-function ugE_3t(ischecked){ //操舵装置改良3
-    
-    if(ischecked == true){
-        flag = 3;
-        document.form1.Turn.value *= 0.6;
-    } else{
-        document.form1.Turn.value /= 0.6;
-    }
-}
