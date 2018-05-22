@@ -89,4 +89,14 @@ async def konya(ctx):
     if ctx.invoked_subcommand is None:
         await bot.say('http://koi-game.voltage.co.jp/lovejob/konya/')
 
+@bot.group(pass_context=True)
+async def お兄ちゃん(ctx):
+    if ctx.invoked_subcommand is None:
+        await bot.say('http://tinkle-position.com/onigyu/')
+
+@bot.group(pass_context=True)
+async def ママ(ctx):
+    if ctx.invoked_subcommand is None:
+        await bot.say('http://www.akabeesoft2.com/bosei/')
+
 bot.run("NDA0MTg0NTY1ODgwNzE3MzEy.DUSZSg.NsAf8tWmmZIc2Y-MdkSDcE1Wodg")
