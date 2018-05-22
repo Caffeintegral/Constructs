@@ -1,4 +1,4 @@
-var selectedCountry ="";
+var selectedCountry =""; //
 function countrySet(idname){
     var select1 = document.forms.form1.type;
     var select2 = document.forms.form1.Name;
