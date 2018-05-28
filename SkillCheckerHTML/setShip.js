@@ -1,5 +1,7 @@
-var selectedCountry ="";
+var selectedCountry ="";//
 function countrySet(idname){
+    allcheck(false);
+    ugReset();
     var select1 = document.forms.form1.type;
     var select2 = document.forms.form1.Name;
     select1.options.length = 0;
@@ -56,6 +58,8 @@ function countrySet(idname){
 }
 
 function typeSet(){
+    allcheck(false);
+    ugReset();
     var select2 = document.forms.form1.Name;
     select2.options.length = 0;
     var shipNum;
@@ -236,6 +240,8 @@ function typeSet(){
 
 
 function setship(idname){
+    allcheck(false);
+    ugReset();
     var a = document.getElementById(idname);
     var idx = a.selectedIndex;
     var val = a.options[idx].value;

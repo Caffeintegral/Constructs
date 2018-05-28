@@ -545,3 +545,17 @@ function speedFlag(ischecked){
     }
 }
 
+function ugReset(){
+    document.getElementById("ugA").selectedIndex = 0;
+    ug_A();
+    document.getElementById("ugB").selectedIndex = 0;
+    ug_B();
+    document.getElementById("ugC").selectedIndex = 0;
+    ug_C();
+    document.getElementById("ugD").selectedIndex = 0;
+    ug_D();
+    document.getElementById("ugE").selectedIndex = 0;
+    ug_E();
+    document.getElementById("ugF").selectedIndex = 0;
+    ug_F();
+}

@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>SkillChecker</title>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 <link rel = "stylesheet" type"text/css" href="style.css">
 <link href="https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css" rel="stylesheet" />
@@ -20,6 +21,40 @@
 		<h1>Sheet</h1>
 		<h1>for</h1>
 		<h1>WoWs</h1>
+		<nav class="menu">
+			<input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
+			<label class="menu-open-button" for="menu-open">
+			  <span class="hamburger hamburger-1"></span>
+			  <span class="hamburger hamburger-2"></span>
+			  <span class="hamburger hamburger-3"></span>
+			</label>
+			
+			<a href="#" class="menu-item"> <i class="fa fa-bar-chart"></i> </a>
+			<a href="#" class="menu-item"> <i class="fa fa-plus"></i> </a>
+			<a href="#" class="menu-item"> <i class="fa fa-heart"></i> </a>
+			<a href="#" class="menu-item"> <i class="fa fa-envelope"></i> </a>
+			<a href="#" class="menu-item"> <i class="fa fa-cog"></i> </a>
+		  
+		  </nav>
+		  <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+			<defs>
+			  <filter id="shadowed-goo">
+				  
+				  <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+				  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+				  <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+				  <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+				  <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+				  <feBlend in2="shadow" in="goo" result="goo" />
+				  <feBlend in2="goo" in="SourceGraphic" result="mix" />
+			  </filter>
+			  <filter id="goo">
+				  <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+				  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+				  <feBlend in2="goo" in="SourceGraphic" result="mix" />
+			  </filter>
+			</defs>
+		</svg>
 		<p>Created by <a href="http://twitter.com/caffeintegral/">せなちゃん</a><br>
 		Styled by <a href="http://twitter.com/takumin_inu/">unotovive<br>
 		<a href="#">&copy;グリーンティータイム</a></p>
@@ -170,15 +205,13 @@
 	<div id="migi">
 		<div class="captain">
 			<div class="captain-top">
-				<div class="captain-box">
+				<div class="captain-box" style="width:30%;">
 					<h2>艦長スキル</h2>
 				</div>
-				<div class="captain-box">
-						<div class="counter">
-						現在のスキルポイント合計
-						<input id="Count" name="Count" size="8" value="0" readonly> point
-						<input type="button" value="リセット" onclick="allcheck(false);">
-					</div>
+				<div class="captain-box" style="width:70%;">
+					<h3 style="display: inline-block;">現在のスキルポイント合計</h3>
+					<input id="Count" name="Count" size="8" value="0" readonly><p style="display: inline;">point</p>
+					<a href="#" class="button" id="button-1" onclick="allcheck(false);return false;">RESET</a>
 				</div>
 			</div>
 			<div class="category">
