@@ -342,52 +342,52 @@ function d7(ischecked) {
         document.form1.Count.value = count;
     }
 }
-function d8(ischecked) {
-    var defaultHid = parseInt(document.form1.Hiding.value);
-    var defaultAHid = parseInt(document.form1.AHiding.value);
+// function d8(ischecked) {
+//     var defaultHid = parseInt(document.form1.Hiding.value);
+//     var defaultAHid = parseInt(document.form1.AHiding.value);
 
-    if (ischecked == true) {
-        var count = parseInt(document.form1.Count.value) + 4;
-        document.form1.Count.value = count;
-        console.log(document.form1.type.value);
+//     if (ischecked == true) {
+//         var count = parseInt(document.form1.Count.value) + 4;
+//         document.form1.Count.value = count;
+//         console.log(document.form1.type.value);
 
-        if (document.form1.type.value == "駆逐艦") {
-            document.form1.Hiding.value *= 0.90;
-            document.form1.AHiding.value *= 0.90;
-        }
-        if (document.form1.type.value == "巡洋艦") {
-            document.form1.Hiding.value *= 0.88;
-            document.form1.AHiding.value *= 0.88;
-        }
-        if (document.form1.type.value == "戦艦") {
-            document.form1.Hiding.value *= 0.86;
-            document.form1.AHiding.value *= 0.86;
-        }
-        if (document.form1.type.value == "航空母艦") {
-            document.form1.Hiding.value *= 0.84;
-            document.form1.AHiding.value *= 0.84;
-        }
-    } else {
-        var count = parseInt(document.form1.Count.value) - 4;
-        document.form1.Count.value = count;
-        if (document.form1.type.value == "駆逐艦") {
-            document.form1.Hiding.value /= 0.90;
-            document.form1.AHiding.value /= 0.90;
-        }
-        if (document.form1.type.value == "巡洋艦") {
-            document.form1.Hiding.value /= 0.88;
-            document.form1.AHiding.value /= 0.88;
-        }
-        if (document.form1.type.value == "戦艦") {
-            document.form1.Hiding.value /= 0.86;
-            document.form1.AHiding.value /= 0.86;
-        }
-        if (document.form1.type.value == "航空母艦") {
-            document.form1.Hiding.value /= 0.84;
-            document.form1.AHiding.value /= 0.84;
-        }
-    }
-}
+//         if (document.form1.type.value == "駆逐艦") {
+//             document.form1.Hiding.value *= 0.90;
+//             document.form1.AHiding.value *= 0.90;
+//         }
+//         if (document.form1.type.value == "巡洋艦") {
+//             document.form1.Hiding.value *= 0.88;
+//             document.form1.AHiding.value *= 0.88;
+//         }
+//         if (document.form1.type.value == "戦艦") {
+//             document.form1.Hiding.value *= 0.86;
+//             document.form1.AHiding.value *= 0.86;
+//         }
+//         if (document.form1.type.value == "航空母艦") {
+//             document.form1.Hiding.value *= 0.84;
+//             document.form1.AHiding.value *= 0.84;
+//         }
+//     } else {
+//         var count = parseInt(document.form1.Count.value) - 4;
+//         document.form1.Count.value = count;
+//         if (document.form1.type.value == "駆逐艦") {
+//             document.form1.Hiding.value /= 0.90;
+//             document.form1.AHiding.value /= 0.90;
+//         }
+//         if (document.form1.type.value == "巡洋艦") {
+//             document.form1.Hiding.value /= 0.88;
+//             document.form1.AHiding.value /= 0.88;
+//         }
+//         if (document.form1.type.value == "戦艦") {
+//             document.form1.Hiding.value /= 0.86;
+//             document.form1.AHiding.value /= 0.86;
+//         }
+//         if (document.form1.type.value == "航空母艦") {
+//             document.form1.Hiding.value /= 0.84;
+//             document.form1.AHiding.value /= 0.84;
+//         }
+//     }
+// }
 
 function allcheck(re) {
     var count = document.form1.elements.length;
