@@ -347,10 +347,11 @@ function ugE_0(ischecked) { //隠蔽システム改良1
 function ugE_1(ischecked){ //隠蔽システム改良1
     if(ischecked == true){
         flagE = 2;
-        document.form1.Hiding.value *= 0.9;
+        currentShipData[16] *= 0.9;
     } else{
-        document.form1.Hiding.value /= 0.9;
+        currentShipData[16] /= 0.9;
     }
+    setShip();
 }
 function ugE_2(ischecked){ //目標測距装置改良1
     if(ischecked == true){
@@ -469,10 +470,11 @@ function ugF_8(ischecked){ //航空管制改良2
 
 function camoflage(ischecked){
     if(ischecked == true){
-        document.form1.Hiding.value *= 0.98;
+        currentShipData[16] *= 0.97;
     } else{
-        document.form1.Hiding.value /= 0.98;
+        currentShipData[16] /= 0.97;
     }
+    setShip();
 }
 
 function AAFlag(ischecked){
