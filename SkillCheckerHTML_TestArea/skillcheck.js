@@ -6,6 +6,7 @@ function a1(ischecked) {
         var count = parseInt(document.form1.Count.value) - 1;
         document.form1.Count.value = count;
     }
+    setShip();
 }
 function a2(ischecked) {
     if (ischecked == true) {
@@ -15,6 +16,7 @@ function a2(ischecked) {
         var count = parseInt(document.form1.Count.value) - 1;
         document.form1.Count.value = count;
     }
+    setShip();
 }
 function a3(ischecked) {
     if (ischecked == true) {
@@ -24,6 +26,7 @@ function a3(ischecked) {
         var count = parseInt(document.form1.Count.value) - 1;
         document.form1.Count.value = count;
     }
+    setShip();
 }
 function a4(ischecked) {
     if (ischecked == true) {
@@ -33,6 +36,7 @@ function a4(ischecked) {
         var count = parseInt(document.form1.Count.value) - 1;
         document.form1.Count.value = count;
     }
+    setShip();
 }
 function a5(ischecked) {
     if (ischecked == true) {
@@ -42,6 +46,7 @@ function a5(ischecked) {
         var count = parseInt(document.form1.Count.value) - 1;
         document.form1.Count.value = count;
     }
+    setShip();
 }
 function a6(ischecked) {
     if (ischecked == true) {
@@ -51,6 +56,7 @@ function a6(ischecked) {
         var count = parseInt(document.form1.Count.value) - 1;
         document.form1.Count.value = count;
     }
+    setShip();
 }
 function a7(ischecked){
     if (ischecked == true) {
@@ -60,6 +66,7 @@ function a7(ischecked){
         var count = parseInt(document.form1.Count.value) - 1;
         document.form1.Count.value = count;
     }
+    setShip();
 }
 function a8(ischecked) {
     if (ischecked == true) {
@@ -69,6 +76,7 @@ function a8(ischecked) {
         var count = parseInt(document.form1.Count.value) - 1;
         document.form1.Count.value = count;
     }
+    setShip();
 }
 function b1(ischecked) {
     if (ischecked == true) {
@@ -78,6 +86,7 @@ function b1(ischecked) {
         var count = parseInt(document.form1.Count.value) - 2;
         document.form1.Count.value = count;
     }
+    setShip();
 }
 function b2(ischecked) {
     if (ischecked == true) {
@@ -87,6 +96,7 @@ function b2(ischecked) {
         var count = parseInt(document.form1.Count.value) - 2;
         document.form1.Count.value = count;
     }
+    setShip();
 }
 function b3(ischecked){
     if (ischecked == true) {
@@ -96,21 +106,23 @@ function b3(ischecked){
         var count = parseInt(document.form1.Count.value) - 2;
         document.form1.Count.value = count;
     }
+    setShip();
 }
 function b4(ischecked){ //雷速向上
     if (ischecked == true) {
         var count = parseInt(document.form1.Count.value) + 2;
         document.form1.Count.value = count;
-        var speed = parseInt(document.form1.TSpeed.value) + 5;
-        document.form1.TSpeed.value = speed;
+        var speed = parseInt(currentShipData[10]) + 5;
+        currentShipData[10] = speed;
         document.form1.TRange.value *=0.80;
     } else {
         var count = parseInt(document.form1.Count.value) - 2;
         document.form1.Count.value = count;
-        var speed = parseInt(document.form1.TSpeed.value) - 5;
-        document.form1.TSpeed.value = speed;
+        var speed = parseInt(currentShipData[10]) - 5;
+        currentShipData[10] = speed;
         document.form1.TRange.value /= 0.80;
     }
+    setShip();
 }
 function b5(ischecked){
     if (ischecked == true) {
@@ -120,6 +132,7 @@ function b5(ischecked){
         var count = parseInt(document.form1.Count.value) - 2;
         document.form1.Count.value = count;
     }
+    setShip();
 }
 function b6(ischecked){
     if (ischecked == true) {
@@ -129,6 +142,7 @@ function b6(ischecked){
         var count = parseInt(document.form1.Count.value) - 2;
         document.form1.Count.value = count;
     }
+    setShip();
 }
 function b7(ischecked) {
     if (ischecked == true) {
@@ -138,6 +152,7 @@ function b7(ischecked) {
         var count = parseInt(document.form1.Count.value) - 2;
         document.form1.Count.value = count;
     }
+    setShip();
 }
 function b8(ischecked) {
     if (ischecked == true) {
@@ -147,6 +162,7 @@ function b8(ischecked) {
         var count = parseInt(document.form1.Count.value) - 2;
         document.form1.Count.value = count;
     }
+    setShip();
 }
 function c1(ischecked) {
     if (ischecked == true) {
@@ -156,30 +172,33 @@ function c1(ischecked) {
         var count = parseInt(document.form1.Count.value) - 3;
         document.form1.Count.value = count;
     }
+    setShip();
 }
 function c2(ischecked) {
     if (ischecked == true) {
         var count = parseInt(document.form1.Count.value) + 3;
         document.form1.Count.value = count;
-        var hp = parseInt(document.form1.HP.value) + parseInt(document.form1.Tier.value) * 350;
-        document.form1.HP.value = hp;
+        var hp = parseInt(currentShipData[3]) + parseInt(currentShipData[2]) * 350;
+        currentShipData[3] = hp;
     } else {
         var count = parseInt(document.form1.Count.value) - 3;
         document.form1.Count.value = count;
-        var hp = parseInt(document.form1.HP.value) - parseInt(document.form1.Tier.value) * 350;
-        document.form1.HP.value = hp;
+        var hp = parseInt(currentShipData[3]) - parseInt(currentShipData[2]) * 350;
+        currentShipData[3] = hp;
     }
+    setShip();
 }
 function c3(ischecked) {
     if (ischecked == true) {
         var count = parseInt(document.form1.Count.value) + 3;
         document.form1.Count.value = count;
-        document.form1.TLoad.value *= 0.90;
+        currentShipData[11] *= 0.90;
     } else {
         var count = parseInt(document.form1.Count.value) - 3;
         document.form1.Count.value = count;
-        document.form1.TLoad.value /= 0.90;
+        currentShipData[11] /= 0.90;
     }
+    setShip();
 }
 function c4(ischecked) {
     if (ischecked == true) {
@@ -189,18 +208,20 @@ function c4(ischecked) {
         var count = parseInt(document.form1.Count.value) - 3;
         document.form1.Count.value = count;
     }
+    setShip();
 }
 function c5(ischecked) {
     if (ischecked == true) {
         var count = parseInt(document.form1.Count.value) + 3;
         document.form1.Count.value = count;
-        document.form1.AADamage.value *= 1.20;
+        currentShipData[13] *= 1.20;
 
     } else {
         var count = parseInt(document.form1.Count.value) - 3;
         document.form1.Count.value = count;
-        document.form1.AADamage.value /= 1.20;
+        currentShipData[13] /= 1.20;
     }
+    setShip();
 }
 function c6(ischecked) {
     if (ischecked == true) {
@@ -210,23 +231,25 @@ function c6(ischecked) {
         var count = parseInt(document.form1.Count.value) - 3;
         document.form1.Count.value = count;
     }
+    setShip();
 }
 function c7(ischecked) {
     if (ischecked == true) {
         var count = parseInt(document.form1.Count.value) + 3;
         document.form1.Count.value = count;
-        var a = parseInt(document.form1.Burn.value) + 2;
-        var b = parseInt(document.form1.SBurn.value) + 2;
-        document.form1.Burn.value = a;
-        document.form1.SBurn.value = b;
+        var a = parseInt(currentShipData[6]) + 2;
+        var b = parseInt(document.form1.c.value) + 2;
+        currentShipData[6] = a;
+        currentShipData[8] = b;
     } else {
         var count = parseInt(document.form1.Count.value) - 3;
         document.form1.Count.value = count;
-        var a = parseInt(document.form1.Burn.value) - 2;
-        var b = parseInt(document.form1.SBurn.value) - 2;
-        document.form1.Burn.value = a;
-        document.form1.SBurn.value = b;
+        var a = parseInt(currentShipData[6]) - 2;
+        var b = parseInt(currentShipData[8]) - 2;
+        currentShipData[6] = a;
+        currentShipData[8] = b;
     }
+    setShip();
 }
 function c8(ischecked) {
     if (ischecked == true) {
@@ -236,6 +259,7 @@ function c8(ischecked) {
         var count = parseInt(document.form1.Count.value) - 3;
         document.form1.Count.value = count;
     }
+    setShip();
 }
 function d1(ischecked) {
     if (ischecked == true) {
@@ -245,6 +269,7 @@ function d1(ischecked) {
         var count = parseInt(document.form1.Count.value) - 4;
         document.form1.Count.value = count;
     }
+    setShip();
 }
 function d2(ischecked) {
     if (ischecked == true) {
@@ -254,40 +279,42 @@ function d2(ischecked) {
         var count = parseInt(document.form1.Count.value) - 4;
         document.form1.Count.value = count;
     }
+    setShip();
 }
 function d3(ischecked) {
     if (ischecked == true) {
         var count = parseInt(document.form1.Count.value) + 4;
         document.form1.Count.value = count;
 
-        if (document.form1.Caliber.value < 139) {
-            var a = parseInt(document.form1.Burn.value) - 1;
-            var b = parseInt(document.form1.SBurn.value) - 1;
-            document.form1.Burn.value = a;
-            document.form1.SBurn.value = b;
+        if (currentShipData[4] < 139) {
+            var a = parseInt(currentShipData[6]) - 1;
+            var b = parseInt(currentShipData[8]) - 1;
+            currentShipData[6] = a;
+            currentShipData[8] = b;
         }
-        if (document.form1.Caliber.value > 139) {
-            var a = parseInt(document.form1.Burn.value) - 3;
-            var b = parseInt(document.form1.SBurn.value) - 3;
-            document.form1.Burn.value = a;
-            document.form1.SBurn.value = b;
+        if (currentShipData[4] > 139) {
+            var a = parseInt(currentShipData[6]) - 3;
+            var b = parseInt(currentShipData[8]) - 3;
+            currentShipData[6] = a;
+            currentShipData[8] = b;
         }
     } else {
         var count = parseInt(document.form1.Count.value) - 4;
         document.form1.Count.value = count;
-        if (document.form1.Caliber.value < 139) {
-            var a = parseInt(document.form1.Burn.value) + 1;
-            var b = parseInt(document.form1.SBurn.value) + 1;
-            document.form1.Burn.value = a;
-            document.form1.SBurn.value = b;
+        if (currentShipData[4] < 139) {
+            var a = parseInt(currentShipData[6]) + 1;
+            var b = parseInt(currentShipData[8]) + 1;
+            currentShipData[6] = a;
+            currentShipData[8] = b;
         }
-        if (document.form1.Caliber.value > 139) {
-            var a = parseInt(document.form1.Burn.value) + 3;
-            var b = parseInt(document.form1.SBurn.value) + 3;
-            document.form1.Burn.value = a;
-            document.form1.SBurn.value = b;
+        if (currentShipData[4] > 139) {
+            var a = parseInt(currentShipData[6]) + 3;
+            var b = parseInt(currentShipData[8]) + 3;
+            currentShipData[6] = a;
+            currentShipData[8] = b;
         }
     }
+    setShip();
 }
 function d4(ischecked) {
     if (ischecked == true) {
@@ -297,40 +324,42 @@ function d4(ischecked) {
         var count = parseInt(document.form1.Count.value) - 4;
         document.form1.Count.value = count;
     }
+    setShip();
 }
 function d5(ischecked) {
     if (ischecked == true) {
         var count = parseInt(document.form1.Count.value) + 4;
         document.form1.Count.value = count;
 
-        if (document.form1.Caliber.value < 139) {
+        if (currentShipData[4] < 139) {
             document.form1.Range.value *= 1.20;
-            document.form1.AA.value *= 1.20;
+            currentShipData[12] *= 1.20;
         }
-        if (document.form1.Caliber.value > 139) {
-            document.form1.AA.value *= 1.20;
+        if (currentShipData[4] > 139) {
+            currentShipData[12] *= 1.20;
         }
     } else {
         var count = parseInt(document.form1.Count.value) - 4;
         document.form1.Count.value = count;
-        if (document.form1.Caliber.value < 139) {
+        if (currentShipData[4] < 139) {
             document.form1.Range.value /= 1.20;
-            document.form1.AA.value /= 1.20;
+            currentShipData[12] /= 1.20;
         }
-        if (document.form1.Caliber.value > 139) {
-            document.form1.AA.value /= 1.20;
+        if (currentShipData[4] > 139) {
+            currentShipData[12] /= 1.20;
         }
     }
+    setShip();
 }
 function d6(ischecked) {
     if (ischecked == true) {
         var count = parseInt(document.form1.Count.value) + 4;
         document.form1.Count.value = count;
-        document.form1.AA.value *= 2;
+        currentShipData[12] *= 2;
     } else {
         var count = parseInt(document.form1.Count.value) - 4;
         document.form1.Count.value = count;
-        document.form1.AA.value /= 2;
+        currentShipData[12] /= 2;
     }
 }
 function d7(ischecked) {
@@ -341,53 +370,55 @@ function d7(ischecked) {
         var count = parseInt(document.form1.Count.value) - 4;
         document.form1.Count.value = count;
     }
+    setShip();
 }
-// function d8(ischecked) {
-//     var defaultHid = parseInt(document.form1.Hiding.value);
-//     var defaultAHid = parseInt(document.form1.AHiding.value);
+function d8(ischecked) {
+    var defaultHid = parseInt(currentShipData[16]);
+    var defaultAHid = parseInt(currentShipData[17]);
 
-//     if (ischecked == true) {
-//         var count = parseInt(document.form1.Count.value) + 4;
-//         document.form1.Count.value = count;
-//         console.log(document.form1.type.value);
+    if (ischecked == true) {
+        var count = parseInt(document.form1.Count.value) + 4;
+        document.form1.Count.value = count;
+        console.log(document.form1.type.value);
 
-//         if (document.form1.type.value == "駆逐艦") {
-//             document.form1.Hiding.value *= 0.90;
-//             document.form1.AHiding.value *= 0.90;
-//         }
-//         if (document.form1.type.value == "巡洋艦") {
-//             document.form1.Hiding.value *= 0.88;
-//             document.form1.AHiding.value *= 0.88;
-//         }
-//         if (document.form1.type.value == "戦艦") {
-//             document.form1.Hiding.value *= 0.86;
-//             document.form1.AHiding.value *= 0.86;
-//         }
-//         if (document.form1.type.value == "航空母艦") {
-//             document.form1.Hiding.value *= 0.84;
-//             document.form1.AHiding.value *= 0.84;
-//         }
-//     } else {
-//         var count = parseInt(document.form1.Count.value) - 4;
-//         document.form1.Count.value = count;
-//         if (document.form1.type.value == "駆逐艦") {
-//             document.form1.Hiding.value /= 0.90;
-//             document.form1.AHiding.value /= 0.90;
-//         }
-//         if (document.form1.type.value == "巡洋艦") {
-//             document.form1.Hiding.value /= 0.88;
-//             document.form1.AHiding.value /= 0.88;
-//         }
-//         if (document.form1.type.value == "戦艦") {
-//             document.form1.Hiding.value /= 0.86;
-//             document.form1.AHiding.value /= 0.86;
-//         }
-//         if (document.form1.type.value == "航空母艦") {
-//             document.form1.Hiding.value /= 0.84;
-//             document.form1.AHiding.value /= 0.84;
-//         }
-//     }
-// }
+        if (document.form1.type.value == "駆逐艦") {
+            currentShipData[16] *= 0.90;
+            currentShipData[17] *= 0.90;
+        }
+        if (document.form1.type.value == "巡洋艦") {
+            currentShipData[16] *= 0.88;
+            currentShipData[17] *= 0.88;
+        }
+        if (document.form1.type.value == "戦艦") {
+            currentShipData[16] *= 0.86;
+            currentShipData[17] *= 0.86;
+        }
+        if (document.form1.type.value == "航空母艦") {
+            currentShipData[16] *= 0.84;
+            currentShipData[17] *= 0.84;
+        }
+    } else {
+        var count = parseInt(document.form1.Count.value) - 4;
+        document.form1.Count.value = count;
+        if (document.form1.type.value == "駆逐艦") {
+            currentShipData[16] /= 0.90;
+            currentShipData[17] /= 0.90;
+        }
+        if (document.form1.type.value == "巡洋艦") {
+            currentShipData[16] /= 0.88;
+            currentShipData[17] /= 0.88;
+        }
+        if (document.form1.type.value == "戦艦") {
+            currentShipData[16] /= 0.86;
+            currentShipData[17] /= 0.86;
+        }
+        if (document.form1.type.value == "航空母艦") {
+            currentShipData[16] /= 0.84;
+            currentShipData[17] /= 0.84;
+        }
+    }
+    setShip();
+}
 
 function allcheck(re) {
     var count = document.form1.elements.length;
@@ -395,6 +426,7 @@ function allcheck(re) {
         document.form1.elements[i].checked = re;
     }
     document.form1.Count.value = 0;
+
 
     for (i = 0; i < shipdata.length; i++) {
         if (shipdata[i][0] == document.form1.Name.value) {

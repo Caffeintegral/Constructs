@@ -238,34 +238,75 @@ function typeSet(){
     }
 }
 
+var currentShipData = ["", "", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
-function setship(idname){
+function setCurrentShipData(idname) {
     allcheck(false);
     ugReset();
-    var a = document.getElementById(idname);
-    var idx = a.selectedIndex;
-    var val = a.options[idx].value;
-    var txt = a.options[idx].text;
-    for(i=0; i<shipdata.length; i++){
-        if(shipdata[i][0]==txt){
-            document.form1.Tier.value = shipdata[i][2];
-            document.form1.HP.value = shipdata[i][3];
-            document.form1.Caliber.value = shipdata[i][4];
-            document.form1.Range.value = shipdata[i][5];
-            document.form1.Burn.value = shipdata[i][6];
-            document.form1.SRange.value = shipdata[i][7];
-            document.form1.SBurn.value = shipdata[i][8];
-            document.form1.TRange.value = shipdata[i][9];
-            document.form1.TSpeed.value = shipdata[i][10];
-            document.form1.TLoad.value = shipdata[i][11];
-            document.form1.AA.value = shipdata[i][12];
-            document.form1.AADamage.value = shipdata[i][13];
-            document.form1.Speed.value = shipdata[i][14];
-            document.form1.Turn.value = shipdata[i][15];
-            document.form1.Hiding.value = shipdata[i][16];
-            document.form1.AHiding.value = shipdata[i][17];
-
+    var shipNameId = document.getElementById(idname);
+    var idx = shipNameId.selectedIndex;
+    var shipName = shipNameId.options[idx].text;
+    var index;
+    for (i = 0; i < shipdata.length; i++) {
+        if (shipdata[i][0] == shipName) {
+            index = i;
             break;
         }
     }
+    for (n = 0; n < currentShipData.length; n++) {
+        currentShipData[n] = shipdata[index][n];
+    }
+    setShip();
 }
+
+function setShip() {
+
+    document.form1.Tier.value = Math.ceil(currentShipData[2] * 100) / 100; //Tier
+    document.form1.HP.value = Math.ceil(currentShipData[3] * 100) / 100; //HP
+    document.form1.Caliber.value = Math.ceil(currentShipData[4] * 100) / 100; //主砲口径
+    document.form1.Range.value = Math.ceil(currentShipData[5] * 100) / 100; //主砲射程
+    document.form1.Burn.value = Math.ceil(currentShipData[6] * 100) / 100; //主砲火災発生率
+    document.form1.SRange.value = Math.ceil(currentShipData[7] * 100) / 100; //副砲射程
+    document.form1.SBurn.value = Math.ceil(currentShipData[8] * 100) / 100; //副砲火災発生率
+    document.form1.TRange.value = Math.ceil(currentShipData[9] * 100) / 100; //魚雷射程
+    document.form1.TSpeed.value = Math.ceil(currentShipData[10] * 100) / 100; //魚雷速度
+    document.form1.TLoad.value = Math.ceil(currentShipData[11] * 100) / 100; //魚雷装填速度
+    document.form1.AA.value = Math.ceil(currentShipData[12] * 100) / 100; //最長対空砲距離
+    document.form1.AADamage.value = Math.ceil(currentShipData[13] * 100) / 100; //最長対空砲秒間平均ダメージ
+    document.form1.Speed.value = Math.ceil(currentShipData[14] * 100) / 100; //最大速度
+    document.form1.Turn.value = Math.ceil(currentShipData[15] * 100) / 100; //転舵所要時間
+    document.form1.Hiding.value = Math.ceil(currentShipData[16] * 100) / 100; //海面発見距離
+    document.form1.AHiding.value = Math.ceil(currentShipData[17] * 100) / 100; //航空発見距離
+}
+
+
+// function setship(idname){
+//     allcheck(false);
+//     ugReset();
+//     var a = document.getElementById(idname);
+//     var idx = a.selectedIndex;
+//     var val = a.options[idx].value;
+//     var txt = a.options[idx].text;
+//     for(i=0; i<shipdata.length; i++){
+//         if(shipdata[i][0]==txt){
+//             document.form1.Tier.value = shipdata[i][2];
+//             document.form1.HP.value = shipdata[i][3];
+//             document.form1.Caliber.value = shipdata[i][4];
+//             document.form1.Range.value = shipdata[i][5];
+//             document.form1.Burn.value = shipdata[i][6];
+//             document.form1.SRange.value = shipdata[i][7];
+//             document.form1.SBurn.value = shipdata[i][8];
+//             document.form1.TRange.value = shipdata[i][9];
+//             document.form1.TSpeed.value = shipdata[i][10];
+//             document.form1.TLoad.value = shipdata[i][11];
+//             document.form1.AA.value = shipdata[i][12];
+//             document.form1.AADamage.value = shipdata[i][13];
+//             document.form1.Speed.value = shipdata[i][14];
+//             document.form1.Turn.value = shipdata[i][15];
+//             document.form1.Hiding.value = shipdata[i][16];
+//             document.form1.AHiding.value = shipdata[i][17];
+
+//             break;
+//         }
+//     }
+// }
