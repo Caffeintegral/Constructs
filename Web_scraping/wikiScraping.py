@@ -5,7 +5,7 @@ from urllib import parse
 import time
 
 # names = ['Umikaze', 'Wakatake','Isokaze','Minekaze','Mutsuki','Fubuki','Hatsuharu','Akatsuki','Shiratsuyu','Kagero','Akizuki','Yūgumo','Shimakaze','Tachibana','Kamikaze','Shinonome','Asashio','HSF_Harekaze']
-# names = ["Hashidate","Chikuma","Tenryu","Kuma","Furutaka","Aoba","Myoko","Mogami","Ibuki","Zao","Katori","Iwaki_Alpha","Yubari","Atago"]
+names = ["Hashidate","Chikuma","Tenryu","Kuma","Furutaka","Aoba","Myoko","Mogami","Ibuki","Zao","Katori","Iwaki_Alpha","Yubari","Atago"]
 # names = ["Kawachi","Myogi","Kongo","Fuso","Nagato","Amagi","Izumo","Yamato","Mikasa","Ishizuchi","Mutsu","Ashitaka","Kii","Musashi"]
 # names = ["Sampson","Wickes","Clemson","Nicholas","Farragut","Mahan","Benson","Fletcher","Gearing","Smith","Sims","Kidd","Black"]
 # names = ["Erie","Chester","St._Louis","Phoenix","Omaha","Pensacola","Dallas","New_Orleans","Helena","Baltimore","Cleveland","Buffalo","Seattle","Des_Moines","Worcester","Albany","Marblehead","Atlanta","Indianapolis","Flint","Boise","Salem"]
@@ -19,7 +19,7 @@ import time
 # names = ["Campbeltown", "Gallant"]
 # names = ["Black_Swan", "Weymouth", "Caledon", "Danae", "Emerald", "Leander", "Fiji", "Edinburgh", "Neptune", "Minotaur", "Belfast"]
 # names = ["Bellerophon", "Orion", "Iron_Duke", "Queen_Elizabeth", "King_George_V", "Monarch", "Lion", "Conqueror", "Warspite", "Hood", "Duke_of_York", "Nelson"]
-names = ["Aigle"]
+# names = ["Aigle"]
 
 f = open('frdd.txt', 'w')
 for name in names:
