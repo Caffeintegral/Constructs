@@ -149,8 +149,11 @@ class Game(ReversiBoard):
         self.shift_player()
 
     def show_score(self):
-        print("{}: {}".format("BLACK",self.disks[BLACK]))
-        print("{}: {}".format("WHITE",self.disks[WHITE]))
+        print("{}: {}".format("BLACK", self.disks[BLACK]))
+        print("{}: {}".format("WHITE", self.disks[WHITE]))
+
+    def get_disk_map(self):
+        
 
     def finish_game(self):
         self.disks = self.get_disk_map()
@@ -188,15 +191,21 @@ if __name__ == "__main__":
         
         if possible == []:
             print("player {} can not puts.".format(player_name))
-            gaem.pass_moving()
+            game.pass_moving()
             continue
 
         game.show_board()
-        print("player: " + player_name)
-        print("put to: " + str(possible))
-        index = int(input("choose: "))
-        if index 
+        game.show_score()
 
-        game.put_disk(*possible[index])
+        print("player: " + player_name + "さんのターンです")
+        print("置く場所を選択してください: " + str(possible) + "0番目から" + str(len(possible)-1) + "番目を整数で選択してください")
+        index = input("どこに置く？: ")
+        if index.isdigit() and int(index) < int(len(possible)):
+            game.put_disk(*possible[int(index)])
+        else:
+            print("整数0～で選択してください")
+
+
+        
 
     
