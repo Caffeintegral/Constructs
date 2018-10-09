@@ -152,7 +152,7 @@ class Game(ReversiBoard):
         print("{}: {}".format("BLACK", self.disks[BLACK]))
         print("{}: {}".format("WHITE", self.disks[WHITE]))
 
-    def get_disk_map(self):
+    # def get_disk_map(self):
         
 
     def finish_game(self):
